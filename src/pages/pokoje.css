@@ -1,0 +1,42 @@
+.pokoje_content{
+    margin: 1rem auto;
+    padding: 0 1rem;
+    font-family: 'Lato';
+}
+.pokoje_content h1{
+    font-size: 2.5rem;
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+    color: #3a5a40;
+}
+.pokoje_content h2{
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+    color: #3a5a40;
+}
+.pokoje_content p{
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+.pokoje_content span{
+    font-weight: bold;
+    color: #3a5a40;
+}
+.pokoje_content .pokoje_section{
+    max-width: 900px;
+    margin: 2rem auto ;
+    padding: 3%;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    font-family: var(--font-lato)
+}
+.pokoje_content .RoomCards{
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+}

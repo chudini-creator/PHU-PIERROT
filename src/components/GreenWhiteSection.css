@@ -1,0 +1,47 @@
+.GreenWhite{
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+.GreenWhite_Content{
+    width: 90%;
+    margin-left: 5%;
+}
+.GreenWhite_green{
+    background-color: var(--font-color);
+    color: white;
+}
+.GreenWhite_white{
+    background-color: white;
+    color: var(--font-color);
+}
+.GreenWhite h3{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.GreenWhite p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 1000px) {
+    .GreenWhite h3{
+        font-size: 1.5rem;
+    }
+    .GreenWhite p{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .GreenWhite h3{
+        font-size: 1.3rem;
+    }
+    .GreenWhite p{
+        font-size: 0.9rem;
+    }
+}

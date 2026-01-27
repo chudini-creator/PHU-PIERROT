@@ -1,0 +1,146 @@
+:root {
+  --card-bg: #ffffff;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  --card-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  --card-radius: 20px;
+  --color-primary: #3a5a40;
+  --color-text-light: #555;
+  --transition-card: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --transition-image: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.RoomCard {
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: var(--transition-card);
+  text-decoration: none; 
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  perspective: 1000px;
+}
+.RoomCard:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: var(--card-hover-shadow);
+}
+.RoomCard_image {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden; 
+}
+
+.RoomCard_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-image);
+}
+
+.RoomCard:hover .RoomCard_image img {
+  transform: scale(1.1) rotate(1deg);
+  filter: brightness(1.05);
+}
+
+
+.image_placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #f0f0f0;
+  color: #aaa;
+  font-family: "Lato", sans-serif;
+}
+
+.slider_controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.75rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.RoomCard:hover .slider_controls {
+  opacity: 1;
+}
+
+.slider_controls button {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider_controls button:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.RoomCard_info {
+  padding: 1.5rem;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.RoomCard_name {
+  font-family: "Playfair Display", serif; 
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.RoomCard_description {
+  font-family: "Lato", sans-serif;
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1; 
+}
+
+.RoomCard_details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 1rem;
+  margin-top: auto; 
+}
+
+.icon_feature {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  color: var(--font-color);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInFeature 0.5s ease forwards;
+}
+.icon_feature p {
+  margin: 0;
+}
+
+@keyframes fadeInFeature {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

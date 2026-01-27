@@ -1,0 +1,38 @@
+.feature-card {
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid var(--font-color);
+  transition: box-shadow 0.4s ease,
+              transform 0.4s cubic-bezier(0.575, 0.125, 0.32, 1.275)
+              border-color 0.4s ease;
+}
+
+.feature-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  transition: transform 0.7s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.feature-card h3 {
+  font-family: var(--font-poppins);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.feature-card p {
+  font-weight: 300;
+  line-height: 1.7;
+}

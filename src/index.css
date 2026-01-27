@@ -1,0 +1,179 @@
+:root{
+    --font-color: #3a5a40;
+    --font-lato: 'Lato', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+}
+html{
+   scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-family: var(--font-lato);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: absolute;
+    top:0;
+    width: 100%;
+    z-index: 10000;
+}
+#topbar{
+    width: 100%;
+    height: 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    background-color: none;
+}
+#topbar #left{
+    margin-left: 5%;
+    display: flex;
+    gap: 0.5rem;
+}
+#topbar #right{
+    margin-right: 5%;
+    display: flex;
+    gap: 0.5rem;
+}
+#topbar #left button {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        transform: translateY(-3px);
+        transition: all 0.3s ease-in-out
+    }
+}
+#topbar #left .Menu_button{
+    margin-left: 10px;
+    font-size: 1.1rem;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        color: #fff;
+        transform: translateY(-3px);
+        transition: all 0.3s ease-in-out
+    }
+}
+#topbar #right .header_icon{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+}
+#topbar #right a{
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+#topbar #right a:hover{
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-3px);
+}
+#options{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 10000;
+    padding-top: 10px;
+}
+#options #chata, #options #dwor{
+    width: 90%;
+}
+#options #chata .photos, #options #dwor .photos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+#options #chata .photos .photo{
+    width: 49%;
+    position: relative;
+}
+#options #chata .photos .photo img, #options #dwor .photos .photo img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+#options #dwor .photos .photo{
+    width: 24%;
+    position: relative;
+}
+.hidden {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+    #topbar #left .Menu_button{
+      font-size: 0.9rem;
+    }
+    #topbar #right .header_icon{
+      padding: 10px;
+    }
+    #topbar #right .header_icon .PhoneIcon, #topbar #right .header_icon .AtSignIcon, #topbar #right .header_icon .FBIcon{
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+    #topbar #left .MenuIcon{
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+}
+
+/*ANIMACJE*/
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes zoom-in {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.hero-title.animate-on-scroll {
+  transition-delay: 0.5s;
+}
+.intro-section.animate-on-scroll {
+  transform: translateY(50px);
+}
+.feature-card.animate-on-scroll {
+  transform: translateY(50px);
+}
+.cta-section.animate-on-scroll {
+    transform: scale(0.9);
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}

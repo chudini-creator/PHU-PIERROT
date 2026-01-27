@@ -1,0 +1,67 @@
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  padding: 0 10px; 
+}
+.photos.visible {
+  max-height: 2000px; 
+  opacity: 1;
+}
+
+.photos .photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.photos .photo img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; 
+  display: block;
+  transition: transform 0.3s ease;
+}
+.photos .photo:hover img {
+  transform: scale(1.05); 
+}
+.photos .photo h2 {
+  position: absolute;
+  font-family: var(--font-lato);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1024px) {
+    .photos .photo img{
+        height: 200px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .photos .photo img{
+        height: 150px;
+    }
+    .photos .photo{
+        margin-left: 2.5%;
+        width: 45%;
+    }
+    .photos{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .photos .photo h2{
+        font-size: 0.8rem;
+    }
+}

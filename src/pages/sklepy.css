@@ -1,0 +1,61 @@
+.Sklepy {
+  min-height: 100vh;
+}
+.sklepy_content .sklepy_photos{
+    display: flex;
+    flex-direction: column;
+}
+.sklepy_content{
+  width: 100%;
+  background-color: var(--font-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.sklepy_content .sklepy_photos{
+    min-height: 500px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    background-color: white;
+}
+.sklepy_content .sklepy_photos img{
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-bottom: 20px;
+    max-width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.sklepy_content .sklepy_photos .centralPhoto{
+    margin-left: 30%;
+}
+@media (max-width: 900px){
+    .sklepy_content{
+        flex-direction: column;
+    }
+    .sklepy_content .sklepy_photos{
+        min-height: auto;
+        width: 100%;
+        flex-direction: row;
+    }
+    .sklepy_content .sklepy_info{
+        width: 100%;
+    }
+    .sklepy_content .sklepy_photos img{
+        width: 45%;
+        margin-left: 0;
+    }
+    .sklepy_content .sklepy_photos .centralPhoto{
+        margin-left: 0;
+        display: none;
+    }
+    .sklepy_content_reverse{
+        flex-direction: column-reverse;
+    }
+}
