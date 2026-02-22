@@ -22,7 +22,15 @@ function PoleNamiotowe() {
         <div className="PoleNamiotowe">
            <Hero title="Pole namiotowe" bgImage="/img/PoleNamiotowe.png" nextID="#PoleIntro"/>
            <Intro id="PoleIntro" title="Skok w przeszłość" text="Zapraszamy do wyjątkowego miejsca, gdzie kontakt z naturą spotyka się z komfortem. Nasze pole namiotowe to idealna propozycja dla tych, którzy pragną poczuć klimat dawnych biwaków, jednocześnie nie rezygnując z wygody." />
-            {PoleData.map((Pole, index) => (<GreenWhiteSection key={index} title={Pole.title} text={Pole.text} color={Pole.color} />))}
+            {PoleData.map((Pole, index) => (
+                <GreenWhiteSection 
+                    key={index} 
+                    index={index}
+                    title={Pole.title} 
+                    text={Pole.text} 
+                    color={Pole.color} 
+                />
+            ))}
            <CtaSection title="Skontaktuj się z nami" button="Napisz do nas" link="mailto:" phone="tel:"/>
         </div>
 

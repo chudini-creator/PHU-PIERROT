@@ -10,15 +10,6 @@
     align-items: center;
     
 }
-.pierogarnia_p{
-    padding: 40px;
-    width: 90%;
-    margin-left: 5%;
-    color: white;
-    font-size: 1.5vw;
-    font-weight: medium;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
 .pierogarnia_photos{
     height: 100vh;
     width: 50%;
@@ -26,11 +17,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-}
-.pierogarnia_info{
-    width: 50%;
-    background-color: var(--font-color);
-    color: white;
 }
 .pierogarnia_info iframe{
     border-radius: 30px;
@@ -53,14 +39,22 @@
     }
     .pierogarnia_photos{
         height: auto;
-        width: 100%;
+        width: 90%;
         flex-direction: row;
+        margin: 20px 5%;
     }
     .pierogarnia_photos img{
-        width: 40%;
-        height: 200px;
+        padding: 0;
+        margin: 0;
+        width: 48%;
+        height: auto;
     }
-    .pierogarnia_info{
+@media (max-width: 576px){
+    .pierogarnia_photos img{
         width: 100%;
     }
+    .pierogarnia_sec{
+        display: none;
+    }
+}    
 }

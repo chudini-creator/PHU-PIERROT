@@ -3,8 +3,8 @@ import React from "react";
 import "./PhotoGallery.css";
 function PhotoGallery({ type, onPhotoClick }) {
   const chataPhotos = [
-    { src: "/img/pierogarnia.jpg", title: "pierogarnia", link:"/pierogarnia"},
-    { src: "/img/pierogi.webp", title: "nasze sklepy", link: "/sklepy"  },
+    { src: "/img/Pierogarnia/pierogarnia.jpg", title: "pierogarnia", link:"/pierogarnia"},
+    { src: "/img/Sklepy/Wolynska1.webp", title: "nasze sklepy", link: "/sklepy"  },
   ];
 
   const dworPhotos = [

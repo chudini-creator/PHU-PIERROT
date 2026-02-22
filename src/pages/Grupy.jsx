@@ -33,7 +33,15 @@ function Grupy() {
             komfortowe zakwaterowanie oraz smaczne śniadania, a także możliwość
             zorganizowania ogniska."/>
       <div className="groups_container">
-        {groups_data.map((group, index) => (<GreenWhiteSection key={index} title={group.title} text={group.text} color={group.color} />))}
+        {groups_data.map((group, index) => (
+                <GreenWhiteSection 
+                    key={index} 
+                    index={index}
+                    title={group.title} 
+                    text={group.text} 
+                    color={group.color} 
+                />
+            ))}
       </div>
       <CtaSection title="Skontaktuj się z nami" text="Zadzwoń lub napisz do nas, aby zarezerwować miejsce na wakacje." button="Napisz do nas" link="mailto:" phone="tel:691042418" buttonPhone="Zadzwoń do nas" />
     </div>

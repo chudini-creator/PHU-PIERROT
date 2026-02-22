@@ -1,47 +1,103 @@
-.GreenWhite{
+.GreenWhite {
     width: 100%;
-    min-height: 300px;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.8s ease;
+}
+
+.GreenWhite_Content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0px;
 }
-.GreenWhite_Content{
-    width: 90%;
-    margin-left: 5%;
+
+.align-left .text-wrapper { align-self: flex-start; max-width: 600px; }
+.align-right .text-wrapper { align-self: flex-end; max-width: 600px; }
+
+
+.section-number {
+    position: absolute;
+    font-size: clamp(8rem, 15vw, 12rem);
+    font-weight: 900;
+    line-height: 1;
+    top: -80px;
+    z-index: 0;
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.GreenWhite_green{
+
+.align-left .section-number { left: -20px; transform: translateX(-50px); }
+.align-right .section-number { right: -20px; transform: translateX(50px); }
+
+.visible .section-number {
+    opacity: 0.07;
+    transform: translateX(0);
+}
+
+.text-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.GreenWhite h3 {
+    font-size: clamp(1.5rem, 3.5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease 0.2s;
+}
+
+.accent-line {
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    margin-bottom: 30px;
+    transition: width 1s ease 0.5s;
+}
+
+.GreenWhite p {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease 0.4s;
+}
+
+.visible h3, .visible p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.visible .accent-line {
+    width: 80px;
+}
+
+.GreenWhite_green {
     background-color: var(--font-color);
     color: white;
 }
-.GreenWhite_white{
-    background-color: white;
+
+.GreenWhite_white {
+    background-color: #ffffff;
     color: var(--font-color);
 }
-.GreenWhite h3{
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
 
-.GreenWhite p{
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-@media screen and (max-width: 1000px) {
-    .GreenWhite h3{
-        font-size: 1.5rem;
+@media (max-width: 768px) {
+    .GreenWhite { padding: 80px 0; }
+    .align-left .text-wrapper, .align-right .text-wrapper { 
+        max-width: 100%; 
+        align-self: center;
+        text-align: center;
     }
-    .GreenWhite p{
-        font-size: 1rem;
-    }
-}
-@media screen and (max-width: 700px) {
-    .GreenWhite h3{
-        font-size: 1.3rem;
-    }
-    .GreenWhite p{
-        font-size: 0.9rem;
-    }
+    .accent-line { margin: 0 auto 20px auto; }
+    .section-number { display: none; }
 }

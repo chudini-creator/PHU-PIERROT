@@ -34,12 +34,12 @@ header{
     background-color: none;
 }
 #topbar #left{
-    margin-left: 5%;
+    margin-left: 30px;
     display: flex;
     gap: 0.5rem;
 }
 #topbar #right{
-    margin-right: 5%;
+    margin-right: 30px;
     display: flex;
     gap: 0.5rem;
 }

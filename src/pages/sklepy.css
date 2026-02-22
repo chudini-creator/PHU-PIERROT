@@ -1,61 +1,96 @@
-.Sklepy {
-  min-height: 100vh;
+.sklepy {
+    min-height: 100vh;
+    background-color: #fff;
 }
-.sklepy_content .sklepy_photos{
+
+.sklepy_content {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: stretch; 
+    overflow: hidden;
 }
-.sklepy_content{
-  width: 100%;
-  background-color: var(--font-color);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.sklepy_content .sklepy_photos{
-    min-height: 500px;
+
+.sklepy_content .sklepy_photos {
     width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    background-color: white;
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 15px;
+    padding: 30px;
+    background-color: #f8f9fa;
+    align-items: center;
 }
-.sklepy_content .sklepy_photos img{
-    margin-top: 20px;
-    margin-left: 15%;
-    margin-bottom: 20px;
-    max-width: 300px;
+
+.sklepy_content .sklepy_photos img {
+    position: relative; 
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    filter: brightness(0.95);
 }
-.sklepy_content .sklepy_photos .centralPhoto{
-    margin-left: 30%;
+
+.sklepy_content .sklepy_photos img:nth-child(1) {
+    grid-row: span 2;
+    height: 100%;
 }
-@media (max-width: 900px){
-    .sklepy_content{
+
+.sklepy_content .sklepy_photos img:hover {
+    transform: scale(1.02);
+    filter: brightness(1);
+    z-index: 5;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.sklepy_content .sklepy_photos .centralPhoto {
+    transform: rotate(5deg) translate(10px, 0px);
+    z-index: 3;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.sklepy_content .sklepy_photos img:nth-child(3) {
+    transform: rotate(-4deg) translate(-5px, 20px);
+    z-index: 2;
+}
+
+.sklepy_content .sklepy_photos:hover img {
+    transform: rotate(0deg) translate(0, 0) scale(1.05);
+    z-index: 10;
+}
+
+.sklepy_content_reverse {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 900px) {
+    .sklepy_content, 
+    .sklepy_content_reverse {
         flex-direction: column;
     }
-    .sklepy_content .sklepy_photos{
+
+    .sklepy_content .sklepy_photos {
+        display: flex;
+        gap: 2%;
+        background-color: transparent;
+        width: 90%;
         min-height: auto;
-        width: 100%;
-        flex-direction: row;
+        padding: 0;
+        margin: 20px auto;
     }
-    .sklepy_content .sklepy_info{
-        width: 100%;
+
+    .sklepy_content .sklepy_photos img {
+        width: 49%;
+        height: 100%;
+        aspect-ratio: 1 / 1; 
+        transform: none !important;
+        max-height: 250px;
     }
-    .sklepy_content .sklepy_photos img{
-        width: 45%;
-        margin-left: 0;
-    }
-    .sklepy_content .sklepy_photos .centralPhoto{
-        margin-left: 0;
+
+    .sklepy_content .sklepy_photos .centralPhoto {
         display: none;
-    }
-    .sklepy_content_reverse{
-        flex-direction: column-reverse;
     }
 }
