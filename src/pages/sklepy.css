@@ -11,7 +11,7 @@
     overflow: hidden;
 }
 
-.sklepy_content .sklepy_photos {
+.sklepy_content .sklepy_photos, .sklepy_content .sklepy_photos_2 {
     width: 50%;
     min-height: 600px;
     display: grid;
@@ -23,7 +23,7 @@
     align-items: center;
 }
 
-.sklepy_content .sklepy_photos img {
+.sklepy_content .sklepy_photos img, .sklepy_content .sklepy_photos_2 img{
     position: relative; 
     width: 100%;
     height: 100%;
@@ -34,32 +34,14 @@
     filter: brightness(0.95);
 }
 
-.sklepy_content .sklepy_photos img:nth-child(1) {
-    grid-row: span 2;
+.sklepy_content .sklepy_photos_2 img:nth-child(1){
+    grid-column: span 2;
     height: 100%;
 }
 
-.sklepy_content .sklepy_photos img:hover {
-    transform: scale(1.02);
-    filter: brightness(1);
-    z-index: 5;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-}
-
-.sklepy_content .sklepy_photos .centralPhoto {
-    transform: rotate(5deg) translate(10px, 0px);
-    z-index: 3;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
-}
-
-.sklepy_content .sklepy_photos img:nth-child(3) {
-    transform: rotate(-4deg) translate(-5px, 20px);
-    z-index: 2;
-}
-
-.sklepy_content .sklepy_photos:hover img {
-    transform: rotate(0deg) translate(0, 0) scale(1.05);
-    z-index: 10;
+.sklepy_content .sklepy_photos img:nth-child(1) {
+    grid-row: span 2;
+    height: 100%;
 }
 
 .sklepy_content_reverse {

@@ -4,9 +4,9 @@ import Hero from "../components/Hero"
 function Sklepy() {
   return ( 
   <div className="sklepy">
-    <Hero title="Nasze sklepy" bgImage="/img/Sklepy/Zachodnia1.webp"/>
+    <Hero title="Nasze sklepy" bgImage="/img/pierogi/IMG_2865.jpeg"/>
     <div className="sklepy_content">
-      <div className="sklepy_photos">
+      <div className="sklepy_photos_2">
         <img src="/img/Sklepy/Wolynska3.webp"/>
         <img src="/img/Sklepy/Wolynska1.webp" className="centralPhoto"/>
         <img src="/img/Sklepy/Wolynska2.webp"/>

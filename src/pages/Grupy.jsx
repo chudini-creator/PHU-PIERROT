@@ -25,7 +25,7 @@ function Grupy() {
 
   return (
     <div className="Groups">
-      <Hero title="Grupy zorganizowane" bgImage="/img/GrupyZorganizowane.png" nextID="#IntroGrupy"/>
+      <Hero title="Grupy zorganizowane" bgImage="/img/GrupyZorganizowane.webp" nextID="#IntroGrupy"/>
       <Intro id="IntroGrupy" title="Witamy w naszej agroturystyce" text="Zapraszamy grupy zorganizowane do spędzenia niezapomnianego czasu w
             malowniczym otoczeniu, gdzie natura i tradycja tworzą
             niepowtarzalną atmosferę. Nasza agroturystyka to idealne miejsce na

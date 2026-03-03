@@ -4,18 +4,18 @@ import "./PhotoGallery.css";
 function PhotoGallery({ type, onPhotoClick }) {
   const chataPhotos = [
     { src: "/img/Pierogarnia/pierogarnia.jpg", title: "pierogarnia", link:"/pierogarnia"},
-    { src: "/img/Sklepy/Wolynska1.webp", title: "nasze sklepy", link: "/sklepy"  },
+    { src: "/img/pierogi/IMG_2864.jpeg", title: "nasze sklepy", link: "/sklepy"  },
   ];
 
   const dworPhotos = [
-    { src: "/img/pokoje.jpg", title: "pokoje", link: "/pokoje"  },
+    { src: "/img/pokoje.webp", title: "pokoje", link: "/pokoje"  },
     { src: "/img/DwórFront.jpg", title: "apartamenty na wyłączność", link: "/apartamenty"  },
     { src: "/img/Sniadania/chata5.jpg", title: "śniadania", link: "/śniadania"  },
-    { src: "/img/Relaks.jpeg", title: "strefa relaksu", link: "/strefa-relaksu"  },
-    { src: "/img/GrupyZorganizowane.png", title: "grupy zorganizowane", link: "/grupy-zorganizowane"  },
-    { src: "/img/PoleNamiotowe.png", title: "pole namiotowe", link: "pole-namiotowe"  },
-    { src: "/img/Tematyczne.png", title: "weekendy tematyczne", link: "/weekendy-tematyczne"  },
-    { src: "/img/Wspolpraca.png", title: "współpraca", link: "/współpraca" },
+    { src: "/img/Relaks.webp", title: "strefa relaksu", link: "/strefa-relaksu"  },
+    { src: "/img/GrupyZorganizowane.webp", title: "grupy zorganizowane", link: "/grupy-zorganizowane"  },
+    { src: "/img/PoleNamiotowe.webp", title: "pole namiotowe", link: "pole-namiotowe"  },
+    { src: "/img/Tematyczne.webp", title: "weekendy tematyczne", link: "/weekendy-tematyczne"  },
+    { src: "/img/Wspolpraca.webp", title: "współpraca", link: "/współpraca" },
   ];
 
   const photos = type === "chata" ? chataPhotos : type === "dwor" ? dworPhotos : [];

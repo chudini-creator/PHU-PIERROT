@@ -32,7 +32,7 @@ const features = [
 const StrefaRelaksu = () => {
   return (
     <div className="relax-zone-container">
-      <Hero nextID="#RelaxIntro" title="Strefa relaksu" bgImage="/img/Relaks.jpeg"/>
+      <Hero nextID="#RelaxIntro" title="Strefa relaksu" bgImage="/img/Relaks.webp"/>
       <Intro id="RelaxIntro" title="Prawdziwe ukojenie dla zmysłów" text="Dwór Ujazdowski to miejsce, w którym zmysły znajdą prawdziwe ukojenie. 
           Brak aglomeracyjnych świateł i hałasu gwarantują pełen odpoczynek 
           od zgiełku codziennego, miejskiego życia."/>

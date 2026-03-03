@@ -158,7 +158,7 @@ function Pokoje() {
 ];
     return (
         <div className="pokoje">
-            <Hero title="Nasze pokoje" bgImage="/img/pokoje.jpg" nextID="#PokojeIntro" />
+            <Hero title="Nasze pokoje" bgImage="/img/pokoje.webp" nextID="#PokojeIntro" />
             <Intro title="Gościniec" text="Dysponujemy komfortowo urządzonymi pokojami. Panuje u nas ciepła i domowa atmosfera, która sprzyja wypoczynkowi z dala od wielkomiejskiego hałasu.
                         W butikowo urządzonych pokojach połączono nowoczesność z tradycją. Niepowtarzalne pokoje – więcej niż tylko miejsce do spania." id="PokojeIntro"/>
             <div className="pokoje_content">

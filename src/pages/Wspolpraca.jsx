@@ -11,11 +11,11 @@ function Wspolpraca(){
 
     return (
         <div className="Wspolpraca">
-            <Hero title="Współpraca" bgImage="/img/Wspolpraca.png" nextID="#PartnersIntro"/>
+            <Hero title="Współpraca" bgImage="/img/Wspolpraca.webp" nextID="#PartnersIntro"/>
             <Intro id="PartnersIntro" title="Współpraca jest kluczem" text="Wiemy jak w dzisiejszej dobie ważna jest współpraca. Właśnie dlatego współpracujemy z lokalnymi przedsiębiorstwami."/>
             <div ref={ref} className={styler}>
                 <PartnerCard 
-                    imageSrc="/img/Degustacja.png"
+                    imageSrc="/img/Degustacja.webp"
                     title="Winnica Zamojska"
                     subtitle="Odkryj lokalne smaki w sercu regionu."
                     ctaText="Zobacz więcej"
@@ -23,14 +23,14 @@ function Wspolpraca(){
                     
                 />
                 <PartnerCard 
-                    imageSrc="/img/Kajaki.png"
+                    imageSrc="/img/Kajaki.webp"
                     title="Kanukam"
                     subtitle="Mamy też coś dla fanów aktywnego spędzania czasu. Chłopaki z Kanukam na pewno zadbają o niezapomniane przeżycia na spływie kajakowym."
                     ctaText="Zobacz stronę"
                     link="http://kanukam.pl"
                 />
                 <PartnerCard 
-                    imageSrc="/img/Piekarnia.png"
+                    imageSrc="/img/Piekarnia.webp"
                     title="Piekarnia w Nieliszu"
                     subtitle="Na naszych śniadaniach możecie delektować się Państwo chlebem z lokalnej piekarni znajdującej się w Nieliszu. Starannie wypiekany, codziennie świeży i pachnący chleb to klucz do sukcesu dobrego śniadania."
                 />

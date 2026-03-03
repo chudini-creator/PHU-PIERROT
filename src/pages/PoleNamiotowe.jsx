@@ -20,7 +20,7 @@ function PoleNamiotowe() {
 
     return (
         <div className="PoleNamiotowe">
-           <Hero title="Pole namiotowe" bgImage="/img/PoleNamiotowe.png" nextID="#PoleIntro"/>
+           <Hero title="Pole namiotowe" bgImage="/img/PoleNamiotowe.webp" nextID="#PoleIntro"/>
            <Intro id="PoleIntro" title="Skok w przeszłość" text="Zapraszamy do wyjątkowego miejsca, gdzie kontakt z naturą spotyka się z komfortem. Nasze pole namiotowe to idealna propozycja dla tych, którzy pragną poczuć klimat dawnych biwaków, jednocześnie nie rezygnując z wygody." />
             {PoleData.map((Pole, index) => (
                 <GreenWhiteSection 

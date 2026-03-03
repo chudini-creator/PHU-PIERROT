@@ -48,7 +48,6 @@
   height: 100%;
   display: grid;
   place-items: center;
-  background-color: #f0f0f0;
   color: #aaa;
   font-family: "Lato", sans-serif;
 }
@@ -71,7 +70,6 @@
 }
 
 .slider_controls button {
-  background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(8px);
   border: none;
   border-radius: 50%;
@@ -88,7 +86,6 @@
 }
 
 .slider_controls button:hover {
-  background-color: rgba(255, 255, 255, 1);
   transform: scale(1.1);
 }
 
@@ -100,7 +97,7 @@
 }
 
 .RoomCard_name {
-  font-family: "Playfair Display", serif; 
+  font-family: "Lato", serif; 
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--color-primary);
@@ -142,5 +139,11 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 1010px) {
+  .slider_controls{
+    opacity: 1;
   }
 }
