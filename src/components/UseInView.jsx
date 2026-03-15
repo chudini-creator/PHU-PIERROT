@@ -8,6 +8,9 @@ import { useState, useEffect, useRef } from 'react';
 export const useInView = (options = { threshold: 0.1 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
+  const threshold = options.threshold ?? 0.1;
+  const root = options.root ?? null;
+  const rootMargin = options.rootMargin ?? '0px';
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
@@ -15,7 +18,7 @@ export const useInView = (options = { threshold: 0.1 }) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
       }
-    }, options);
+    }, { threshold, root, rootMargin });
 
     const currentRef = ref.current;
     if (currentRef) {
@@ -27,7 +30,7 @@ export const useInView = (options = { threshold: 0.1 }) => {
         observer.unobserve(currentRef);
       }
     };
-  }, [ref, options]);
+  }, [threshold, root, rootMargin]);
 
   return [ref, isVisible];
 };

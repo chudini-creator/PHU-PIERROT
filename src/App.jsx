@@ -3,21 +3,22 @@ import '@fontsource/lato/400.css';
 import '@fontsource/poppins/400.css';
 import '@fontsource/poppins/500.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useEffect } from 'react';
-import Home from "./pages/Home";
-import Sklepy from "./pages/Sklepy";
+import React, { Suspense, lazy, useEffect } from 'react';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Pierogarnia from "./pages/Pierogarnia";
-import Grupy from "./pages/Grupy";
-import Pokoje from "./pages/Pokoje";
-import Apartamenty from "./pages/Apartamenty";
-import StrefaRelaksu from "./pages/StrefaRelaksu";
-import Wspolpraca from "./pages/Wspolpraca";
-import Breakfest from "./pages/Breakfest";
-import Weekendy from "./pages/Weekendy";
-import WinnicaZamojska from './pages/WinnicaZamojska';
-import PoleNamiotowe from './pages/PoleNamiotowe'
+
+const Home = lazy(() => import("./pages/Home"));
+const Sklepy = lazy(() => import("./pages/Sklepy"));
+const Pierogarnia = lazy(() => import("./pages/Pierogarnia"));
+const Grupy = lazy(() => import("./pages/Grupy"));
+const Pokoje = lazy(() => import("./pages/Pokoje"));
+const Apartamenty = lazy(() => import("./pages/Apartamenty"));
+const StrefaRelaksu = lazy(() => import("./pages/StrefaRelaksu"));
+const Wspolpraca = lazy(() => import("./pages/Wspolpraca"));
+const Breakfest = lazy(() => import("./pages/Breakfest"));
+const Weekendy = lazy(() => import("./pages/Weekendy"));
+const WinnicaZamojska = lazy(() => import("./pages/WinnicaZamojska"));
+const PoleNamiotowe = lazy(() => import("./pages/PoleNamiotowe"));
 function App() {
   // Efekt do animacji przy przewijaniu
   useEffect(() => {
@@ -38,24 +39,25 @@ function App() {
   return(
   <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sklepy" element={<Sklepy />} />
-        <Route path="/pierogarnia" element={<Pierogarnia />} />
-        <Route path="/grupy-zorganizowane" element={<Grupy />} />
-        <Route path="/pokoje" element={<Pokoje />} />
-        <Route path="/apartamenty" element={<Apartamenty />} />
-        <Route path="/strefa-relaksu" element={<StrefaRelaksu />} />
-        <Route path="/współpraca" element={<Wspolpraca />} />
-        <Route path="/śniadania" element={<Breakfest />} />
-        <Route path="/weekendy-tematyczne" element={<Weekendy />} />
-        <Route path="/winnica-zamojska" element={<WinnicaZamojska />} />
-        <Route path="/pole-namiotowe" element={<PoleNamiotowe />} />
-      </Routes>
+      <Suspense fallback={<div style={{ minHeight: "35vh" }}>Ładowanie...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sklepy" element={<Sklepy />} />
+          <Route path="/pierogarnia" element={<Pierogarnia />} />
+          <Route path="/grupy-zorganizowane" element={<Grupy />} />
+          <Route path="/pokoje" element={<Pokoje />} />
+          <Route path="/apartamenty" element={<Apartamenty />} />
+          <Route path="/strefa-relaksu" element={<StrefaRelaksu />} />
+          <Route path="/współpraca" element={<Wspolpraca />} />
+          <Route path="/śniadania" element={<Breakfest />} />
+          <Route path="/weekendy-tematyczne" element={<Weekendy />} />
+          <Route path="/winnica-zamojska" element={<WinnicaZamojska />} />
+          <Route path="/pole-namiotowe" element={<PoleNamiotowe />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </BrowserRouter>
   )
 }
 
 export default App;
-

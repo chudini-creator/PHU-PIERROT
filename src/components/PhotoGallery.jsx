@@ -25,7 +25,7 @@ function PhotoGallery({ type, onPhotoClick }) {
       {photos.map((photo, index) => (
         <div key={index} className="photo">
           <Link to={photo.link || ""} onClick={onPhotoClick}>
-          <img src={photo.src} alt={photo.title || ""} />
+          <img src={photo.src} alt={photo.title || ""} loading="lazy" decoding="async" />
           </Link>
           {photo.title && <h2>{photo.title}</h2>}
         </div>

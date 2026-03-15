@@ -10,3 +10,15 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Deploy requirements
+
+- Node.js: `>=20.19.0 <21` or `>=22.12.0 <23` (see `package.json` engines)
+- Recommended local version: `22.12.0` (see `.nvmrc`)
+
+## SPA routing (BrowserRouter)
+
+This project uses `BrowserRouter`, so direct navigation to nested routes requires server-side fallback to `index.html`.
+
+- Vercel: `vercel.json` rewrite is included
+- Netlify/static hosting with `_redirects`: `public/_redirects` is included (`/* /index.html 200`)

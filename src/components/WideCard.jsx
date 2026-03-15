@@ -13,7 +13,7 @@ function WideCard({image, text, title, side}) {
                 <p>{text}</p>
             </div>
             <div className="WideCard_image">
-                <img src={image}/>
+                <img src={image} alt={title || "Zdjęcie sekcji"} loading="lazy" decoding="async" />
             </div>
         </div>
     )
