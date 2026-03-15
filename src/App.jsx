@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { Suspense, lazy, useEffect } from 'react';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import LoadingScreen from "./components/LoadingScreen";
 
 const Home = lazy(() => import("./pages/Home"));
 const Sklepy = lazy(() => import("./pages/Sklepy"));
@@ -19,6 +20,7 @@ const Breakfest = lazy(() => import("./pages/Breakfest"));
 const Weekendy = lazy(() => import("./pages/Weekendy"));
 const WinnicaZamojska = lazy(() => import("./pages/WinnicaZamojska"));
 const PoleNamiotowe = lazy(() => import("./pages/PoleNamiotowe"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 function App() {
   // Efekt do animacji przy przewijaniu
   useEffect(() => {
@@ -39,7 +41,14 @@ function App() {
   return(
   <BrowserRouter>
       <Header />
-      <Suspense fallback={<div style={{ minHeight: "35vh" }}>Ładowanie...</div>}>
+      <Suspense
+        fallback={
+          <LoadingScreen
+            title="Ładowanie strony"
+            description="Przy słabszym internecie może to potrwać chwilę."
+          />
+        }
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/sklepy" element={<Sklepy />} />
@@ -53,6 +62,7 @@ function App() {
           <Route path="/weekendy-tematyczne" element={<Weekendy />} />
           <Route path="/winnica-zamojska" element={<WinnicaZamojska />} />
           <Route path="/pole-namiotowe" element={<PoleNamiotowe />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <Footer />
