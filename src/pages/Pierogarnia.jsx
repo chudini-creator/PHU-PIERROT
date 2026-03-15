@@ -5,8 +5,8 @@ import Intro from "../components/Intro";
 function Pierogarnia(){
     return(
         <div className="pierogarnia">
-            <Hero title="Pierogarnia" bgImage="/img/Pierogarnia/pierogarnia.jpg"/>
-            <Intro title="Nasza pierogarnia" text="Nasze pierogi powstają z pasją, która bulgocze w garnkach i pachnie w całej pierogarni. Każde ciasto jest ręcznie wałkowane, każdy farsz doprawiany tak, by rozpalał zmysły. To smak, który przyciąga, kusi i zostaje w pamięci na długo. Przyjdź i poczuj tę gorącą, pierogową energię!"/>
+            <Hero title="Pierogarnia" bgImage="/img/Pierogarnia/pierogarnia.jpg" nextID="#pierogarniaContent"/>
+            <Intro id="pierogarniaContent" title="Nasza pierogarnia" text="Nasze pierogi powstają z pasją, która bulgocze w garnkach i pachnie w całej pierogarni. Każde ciasto jest ręcznie wałkowane, każdy farsz doprawiany tak, by rozpalał zmysły. To smak, który przyciąga, kusi i zostaje w pamięci na długo. Przyjdź i poczuj tę gorącą, pierogową energię!"/>
             <div className="pierogarnia_content">
                 <div className="pierogarnia_photos">
                     <img src="/img/Pierogarnia/pierogarnia.jpg" alt="Pierogarnia - zdjęcie 1" className="pierogarnia_photo" loading="lazy" decoding="async" />

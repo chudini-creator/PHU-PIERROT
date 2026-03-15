@@ -4,8 +4,8 @@ import Hero from "../components/Hero"
 function Sklepy() {
   return ( 
   <div className="sklepy">
-    <Hero title="Nasze sklepy" bgImage="/img/pierogi/IMG_2865.jpeg"/>
-    <div className="sklepy_content">
+    <Hero title="Nasze sklepy" bgImage="/img/pierogi/IMG_2865.jpeg" nextID="#sklepyContent"/>
+    <div className="sklepy_content" id="sklepyContent">
       <div className="sklepy_photos_2">
         <img src="/img/Sklepy/Wolynska3.webp" alt="Sklep Wołyńska - zdjęcie 1" loading="lazy" decoding="async" />
         <img src="/img/Sklepy/Wolynska1.webp" className="centralPhoto" alt="Sklep Wołyńska - zdjęcie 2" loading="lazy" decoding="async" />

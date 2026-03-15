@@ -24,18 +24,34 @@ header{
     width: 100%;
     z-index: 10000;
 }
-#topbar{
+#options{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 10000;
+    padding-top: 10px;
+    font-family: var(--font-lato);
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, padding-bottom 0.25s ease;
+}
+#options.menu-open{
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-bottom: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+#topbar {
     width: 100%;
     height: 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
-    background-color: none;
+    background-color: transparent;
 }
 #topbar #left{
     margin-left: 30px;
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 #topbar #right{
@@ -43,35 +59,77 @@ header{
     display: flex;
     gap: 0.5rem;
 }
-#topbar #left button {
+.menu-toggle {
     background-color: transparent;
     color: white;
     cursor: pointer;
     border: none;
-    transition: all 0.3s ease-in-out;
-    &:hover{
-        transform: translateY(-3px);
-        transition: all 0.3s ease-in-out
-    }
-}
-#topbar #left .Menu_button{
-    margin-left: 10px;
-    font-size: 1.1rem;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.menu-toggle:hover {
+    transform: translateY(-3px);
+}
+
+.menu-panel{
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-12px);
+    pointer-events: none;
+    visibility: hidden;
+    transition: max-height 0.45s ease, opacity 0.3s ease, transform 0.45s ease, visibility 0.45s ease;
+}
+
+.menu-panel-open{
+    max-height: 1800px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.menu-panel-content{
+    width: 100%;
+    padding: 4px 20px 12px;
+}
+
+.menu-sections{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.menu-section-btn{
+    font-size: 1.1rem;
     cursor: pointer;
     background-color: transparent;
     color: white;
-    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 6px 12px;
     border-radius: 10px;
+    font-family: var(--font-lato);
     font-weight: 300;
-    transition: all 0.3s ease-in-out;
-    &:hover{
-        color: #fff;
-        transform: translateY(-3px);
-        transition: all 0.3s ease-in-out
-    }
+    line-height: 1.2;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-#topbar #right .header_icon{
+
+.menu-section-btn:hover{
+    transform: translateY(-2px);
+}
+
+.menu-section-btn-active{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#topbar #right .header-icon{
     align-items: center;
     display: flex;
     justify-content: center;
@@ -82,57 +140,33 @@ header{
 }
 #topbar #right a{
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 #topbar #right a:hover{
-    transition: all 0.3s ease-in-out;
     transform: translateY(-3px);
 }
-#options{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    z-index: 10000;
-    padding-top: 10px;
-}
-#options #chata, #options #dwor{
-    width: 90%;
-}
-#options #chata .photos, #options #dwor .photos{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2px;
-}
-#options #chata .photos .photo{
-    width: 49%;
-    position: relative;
-}
-#options #chata .photos .photo img, #options #dwor .photos .photo img{
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-}
-#options #dwor .photos .photo{
-    width: 24%;
-    position: relative;
-}
-.hidden {
-  display: none;
-}
+
 @media screen and (max-width: 1000px) {
-    #topbar #left .Menu_button{
+    #topbar #left{
+      margin-left: 15px;
+    }
+    #topbar #right{
+      margin-right: 15px;
+    }
+    .menu-panel-content{
+      padding: 4px 12px 10px;
+    }
+    .menu-section-btn{
       font-size: 0.9rem;
     }
-    #topbar #right .header_icon{
+    #topbar #right .header-icon{
       padding: 10px;
     }
-    #topbar #right .header_icon .PhoneIcon, #topbar #right .header_icon .AtSignIcon, #topbar #right .header_icon .FBIcon{
+    #topbar #right .header-icon .phone-icon, #topbar #right .header-icon .atsign-icon, #topbar #right .header-icon .fb-icon{
       width: 1.3rem;
       height: 1.3rem;
     }
-    #topbar #left .MenuIcon{
+    .menu-icon{
       width: 1.5rem;
       height: 1.5rem;
     }

@@ -1,48 +1,103 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import PhotoGallery from "./PhotoGallery";
-import { Phone, AtSign, Facebook, Menu } from'lucide-react';
+import { Phone, AtSign, Facebook, Menu } from 'lucide-react';
+import headerMenuSections from "../data/headerMenuSections";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSectionId, setActiveSectionId] = useState(null);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-    if (menuOpen) setActiveSection(null); 
+    setMenuOpen((prev) => {
+      const next = !prev;
+      setActiveSectionId(next ? headerMenuSections[0].id : null);
+      return next;
+    });
   };
+
   const closeMenu = () => {
     setMenuOpen(false);
-    setActiveSection(null);
+    setActiveSectionId(null);
   };
+
+  const activeSection =
+    headerMenuSections.find((section) => section.id === activeSectionId) || null;
 
   return (
     <header>
-      <section
-        id="options"
-        style={{ backgroundColor: menuOpen ? "black" : "transparent", paddingBottom: menuOpen ? "10px" : "0", boxShadow: menuOpen ? "0 0 20px rgba(0, 0, 0, 0.5)" : "none", width: menuOpen ? "100%" : "auto", fontFamily: "var(--font-lato)"}}
-      >
+      <section id="options" className={menuOpen ? "menu-open" : ""}>
         <div id="topbar">
           <div id="left">
-            <button onClick={toggleMenu}><Menu size="2rem" className="MenuIcon"/></button>
-            {menuOpen && (
-              <>
-                <button className="Menu_button" onClick={() => setActiveSection("chata")}>
-                  Nasza Chata
-                </button>
-                <button className="Menu_button" onClick={() => setActiveSection("dwor")}>
-                  Dwór Ujazdowski
-                </button>
-              </>
-            )}
+            <button
+              type="button"
+              className="menu-toggle"
+              onClick={toggleMenu}
+              aria-expanded={menuOpen}
+              aria-controls="header-menu-panel"
+              aria-label={menuOpen ? "Zamknij menu" : "Otwórz menu"}
+            >
+              <Menu size="2rem" className="menu-icon" />
+            </button>
           </div>
+
           <div id="right">
-            <a href=""><div className="header_icon"><Phone size="1.5rem" className="PhoneIcon"/></div></a>
-            <a href=""><div className="header_icon"><AtSign size="1.5rem" className="AtSignIcon"/></div></a>
-            <a href=""><div className="header_icon"><Facebook size="1.5rem" className="FBIcon"/></div></a>
+            <a href="tel:+48691042418" aria-label="Zadzwoń do nas">
+              <div className="header-icon">
+                <Phone size="1.5rem" className="phone-icon" />
+              </div>
+            </a>
+
+            <Link to="/współpraca" aria-label="Przejdź do strony współpraca">
+              <div className="header-icon">
+                <AtSign size="1.5rem" className="atsign-icon" />
+              </div>
+            </Link>
+
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Otwórz Facebook"
+            >
+              <div className="header-icon">
+                <Facebook size="1.5rem" className="fb-icon" />
+              </div>
+            </a>
           </div>
         </div>
 
-        <PhotoGallery type={activeSection} onPhotoClick={closeMenu}/>
+        <div
+          id="header-menu-panel"
+          className={`menu-panel ${menuOpen ? "menu-panel-open" : ""}`}
+          aria-hidden={!menuOpen}
+        >
+          <div className="menu-panel-content">
+            <div className="menu-sections" role="tablist" aria-label="Sekcje oferty">
+              {headerMenuSections.map((section) => (
+                <button
+                  key={section.id}
+                  type="button"
+                  role="tab"
+                  className={`menu-section-btn ${
+                    activeSectionId === section.id ? "menu-section-btn-active" : ""
+                  }`}
+                  aria-selected={activeSectionId === section.id}
+                  onClick={() => setActiveSectionId(section.id)}
+                >
+                  {section.label}
+                </button>
+              ))}
+            </div>
+
+            <PhotoGallery
+              id="header-gallery"
+              section={activeSection}
+              isVisible={menuOpen && Boolean(activeSection)}
+              onPhotoClick={closeMenu}
+            />
+          </div>
+        </div>
       </section>
     </header>
   );

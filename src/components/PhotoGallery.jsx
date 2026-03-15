@@ -1,34 +1,54 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import React from "react";
 import "./PhotoGallery.css";
-function PhotoGallery({ type, onPhotoClick }) {
-  const chataPhotos = [
-    { src: "/img/Pierogarnia/pierogarnia.jpg", title: "pierogarnia", link:"/pierogarnia"},
-    { src: "/img/pierogi/IMG_2864.jpeg", title: "nasze sklepy", link: "/sklepy"  },
-  ];
 
-  const dworPhotos = [
-    { src: "/img/pokoje.webp", title: "pokoje", link: "/pokoje"  },
-    { src: "/img/DwórFront.jpg", title: "apartamenty na wyłączność", link: "/apartamenty"  },
-    { src: "/img/Sniadania/chata5.jpg", title: "śniadania", link: "/śniadania"  },
-    { src: "/img/Relaks.webp", title: "strefa relaksu", link: "/strefa-relaksu"  },
-    { src: "/img/GrupyZorganizowane.webp", title: "grupy zorganizowane", link: "/grupy-zorganizowane"  },
-    { src: "/img/PoleNamiotowe.webp", title: "pole namiotowe", link: "pole-namiotowe"  },
-    { src: "/img/Tematyczne.webp", title: "weekendy tematyczne", link: "/weekendy-tematyczne"  },
-    { src: "/img/Wspolpraca.webp", title: "współpraca", link: "/współpraca" },
-  ];
+function PhotoGallery({ id, section, isVisible, onPhotoClick }) {
+  const [sectionForRender, setSectionForRender] = useState(section);
+  const [isSwitching, setIsSwitching] = useState(false);
 
-  const photos = type === "chata" ? chataPhotos : type === "dwor" ? dworPhotos : [];
+  useEffect(() => {
+    if (!section) {
+      setSectionForRender(null);
+      setIsSwitching(false);
+      return;
+    }
+
+    setSectionForRender(section);
+    setIsSwitching(true);
+
+    const timeoutId = setTimeout(() => {
+      setIsSwitching(false);
+    }, 420);
+
+    return () => clearTimeout(timeoutId);
+  }, [section]);
+
+  const photos = sectionForRender?.photos || [];
 
   return (
-    <div className={`photos ${type ? "visible" : ""}`}>
+    <div
+      id={id}
+      className={`gallery ${isVisible ? "gallery-visible" : ""} ${
+        isSwitching ? "gallery-switch" : ""
+      }`}
+      aria-hidden={!isVisible}
+    >
       {photos.map((photo, index) => (
-        <div key={index} className="photo">
-          <Link to={photo.link || ""} onClick={onPhotoClick}>
-          <img src={photo.src} alt={photo.title || ""} loading="lazy" decoding="async" />
+        <article
+          key={`${sectionForRender?.id || "section"}-${photo.link}`}
+          className="gallery-card"
+          style={{ "--card-delay": `${index * 45}ms` }}
+        >
+          <Link to={photo.link} onClick={onPhotoClick}>
+            <img
+              src={photo.src}
+              alt={photo.alt || photo.title || ""}
+              loading="lazy"
+              decoding="async"
+            />
           </Link>
           {photo.title && <h2>{photo.title}</h2>}
-        </div>
+        </article>
       ))}
     </div>
   );
