@@ -63,6 +63,7 @@ function Footer() {
 
         <div className="footer__bottom">
           <p>© {currentYear} PHU PIERROT. Wszystkie prawa zastrzeżone.</p>
+          <p>Realizacja: Igor Sobierajczyk</p>
         </div>
       </div>
     </footer>

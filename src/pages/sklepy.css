@@ -54,7 +54,7 @@
         flex-direction: column;
     }
 
-    .sklepy_content .sklepy_photos {
+    .sklepy_content .sklepy_photos, .sklepy_content .sklepy_photos_2 {
         display: flex;
         gap: 2%;
         background-color: transparent;
@@ -64,7 +64,7 @@
         margin: 20px auto;
     }
 
-    .sklepy_content .sklepy_photos img {
+    .sklepy_content .sklepy_photos img, .sklepy_content .sklepy_photos_2 img {
         width: 49%;
         height: 100%;
         aspect-ratio: 1 / 1; 
@@ -72,7 +72,7 @@
         max-height: 250px;
     }
 
-    .sklepy_content .sklepy_photos .centralPhoto {
+    .sklepy_content .sklepy_photos .centralPhoto, .sklepy_content .sklepy_photos_2 .centralPhoto {
         display: none;
     }
 }
