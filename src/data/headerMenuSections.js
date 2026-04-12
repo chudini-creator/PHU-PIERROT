@@ -4,7 +4,7 @@ const headerMenuSections = [
     label: "Nasza Chata",
     photos: [
       {
-        src: "/img/Pierogarnia/pierogarnia.jpg",
+        src: "/img/Pierogarnia/Pierogarnia.webp",
         title: "Pierogarnia",
         alt: "Pierogarnia PHU Pierrot",
         link: "/pierogarnia",
