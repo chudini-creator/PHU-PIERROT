@@ -5,13 +5,13 @@ import Intro from '../components/Intro';
 import SniadaniaGaleria from "../components/SniadaniaGaleria";
 
 const imagesRelaks = [
-  { src: "/img/Relaks/Relaks5.webp", alt: "Strefa relaksu 1", itemClass: "item-1" },
+  { src: "/img/Relaks/Relaks2.webp", alt: "Strefa relaksu 1", itemClass: "item-1" },
   { src: "/img/Relaks/Relaks7.webp", alt: "Strefa relaksu 2", itemClass: "item-2" },
   { src: "/img/Relaks/Relaks3.webp", alt: "Strefa relaksu 3", itemClass: "item-3" },
   { src: "/img/Relaks/Relaks6.webp", alt: "Strefa relaksu 4", itemClass: "item-4" },
   { src: "/img/Relaks/Relaks1.webp", alt: "Strefa relaksu 5", itemClass: "item-5" },
   { src: "/img/Relaks/Relaks4.webp", alt: "Strefa relaksu 6", itemClass: "item-6" },
-  { src: "/img/Relaks/Relaks2.webp", alt: "Strefa relaksu 7", itemClass: "item-7" },
+  { src: "/img/Relaks/Relaks5.webp", alt: "Strefa relaksu 7", itemClass: "item-7" },
 ]
 import { FaSwimmer, FaTree, FaFire, FaUsers } from 'react-icons/fa';
 import CtaSection from "../components/CtaSection";
