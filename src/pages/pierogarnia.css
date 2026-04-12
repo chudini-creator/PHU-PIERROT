@@ -56,6 +56,7 @@
     }
 
     .pierogarnia_photos img{
+        height: auto;
         width: 70%;
     }
     .pierogarnia_sec{
