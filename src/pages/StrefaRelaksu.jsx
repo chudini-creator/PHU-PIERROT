@@ -5,13 +5,13 @@ import Intro from '../components/Intro';
 import SniadaniaGaleria from "../components/SniadaniaGaleria";
 
 const imagesRelaks = [
-  { src: "/img/Relaks/Relaks5.heic", alt: "Strefa relaksu 1", itemClass: "item-1" },
-  { src: "/img/Relaks/Relaks2.webp", alt: "Strefa relaksu 2", itemClass: "item-2" },
+  { src: "/img/Relaks/Relaks5.webp", alt: "Strefa relaksu 1", itemClass: "item-1" },
+  { src: "/img/Relaks/Relaks7.webp", alt: "Strefa relaksu 2", itemClass: "item-2" },
   { src: "/img/Relaks/Relaks3.webp", alt: "Strefa relaksu 3", itemClass: "item-3" },
-  { src: "/img/Relaks/Relaks6.heic", alt: "Strefa relaksu 4", itemClass: "item-4" },
+  { src: "/img/Relaks/Relaks6.webp", alt: "Strefa relaksu 4", itemClass: "item-4" },
   { src: "/img/Relaks/Relaks1.webp", alt: "Strefa relaksu 5", itemClass: "item-5" },
   { src: "/img/Relaks/Relaks4.webp", alt: "Strefa relaksu 6", itemClass: "item-6" },
-  { src: "/img/Relaks/Relaks7.HEIF", alt: "Strefa relaksu 7", itemClass: "item-7" },
+  { src: "/img/Relaks/Relaks2.webp", alt: "Strefa relaksu 7", itemClass: "item-7" },
 ]
 import { FaSwimmer, FaTree, FaFire, FaUsers } from 'react-icons/fa';
 import CtaSection from "../components/CtaSection";
@@ -40,7 +40,7 @@ const features = [
 ]
 const StrefaRelaksu = () => {
   return (
-    <div className="relax-zone-container">
+    <div className="relax-zone-container main-content">
       <Hero nextID="#RelaxIntro" title="Strefa relaksu" bgImage="/img/Relaks.webp" />
       <Intro id="RelaxIntro" title="Prawdziwe ukojenie dla zmysłów" text="Dwór Ujazdowski to miejsce, w którym zmysły znajdą prawdziwe ukojenie. 
           Brak aglomeracyjnych świateł i hałasu gwarantują pełen odpoczynek 
@@ -51,7 +51,7 @@ const StrefaRelaksu = () => {
         )
         )}
       </section>
-      <SniadaniaGaleria id="RelaxGallery" images={imagesRelaks} />
+      <SniadaniaGaleria id="RelaxGallery" images={imagesRelaks}/>
       <CtaSection title="Gotowi na odpoczynek?" text="Skontaktuj się z nami i zarezerwuj swój pobyt w Dworze Ujazdowskim." button="Zarezerwuj teraz" />
     </div>
   );

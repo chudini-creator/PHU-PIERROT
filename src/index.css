@@ -20,12 +20,17 @@ body {
 body,
 html {
   overscroll-behavior-y: none;
+  background-color: var(--font-color);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.main-content {
+  background-color: white;
 }
 
 header {
@@ -40,13 +45,12 @@ header {
   flex-direction: column;
   width: 100%;
   z-index: 10000;
-  padding-top: 10px;
   font-family: var(--font-lato);
   transition: background-color 0.25s ease, box-shadow 0.25s ease, padding-bottom 0.25s ease;
 }
 
 #options.menu-open {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--font-color);
   padding-bottom: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -184,12 +188,20 @@ header {
     margin-right: 15px;
   }
 
+  #topbar #right a:hover {
+    transform: translateY(0);
+  }
+
   .menu-panel-content {
     padding: 4px 12px 10px;
   }
 
   .menu-section-btn {
     font-size: 0.9rem;
+  }
+
+  .menu-toggle:hover {
+    transform: translateY(0);
   }
 
   #topbar #right .header-icon {

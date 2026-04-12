@@ -581,6 +581,10 @@
   .home__cta {
     grid-template-columns: 1fr;
   }
+
+  .home__signature img {
+    max-height: 400px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -597,6 +601,10 @@
   .home__intro,
   .home__signature-content {
     padding: 1.3rem;
+  }
+
+  .home__signature img {
+    max-height: 200px;
   }
 
   .home__cta-panel {

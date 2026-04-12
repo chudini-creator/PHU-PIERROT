@@ -1,7 +1,7 @@
 .relax-zone-container {
   color: var(--font-color);
   font-family: 'Lato';
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 .features-section {
   display: grid;

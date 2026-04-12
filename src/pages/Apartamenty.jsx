@@ -40,7 +40,7 @@ function Apartamenty() {
     ]
 
     return(
-        <div className="apartamenty">
+        <div className="apartamenty main-content">
             <Hero nextID="#ApartIntro" title="Apartamenty w Dworze" bgImage="/img/DwórFront.jpg"/>
             <Intro id="ApartIntro" title="Nasze apartamenty" text="Istnieje możliwość wynajęcia całej części agroturystycznej w postaci trzech apartamentów wraz ze strefą Wellness (sauna, wanna z hydromasażem) dla maksymalnie 11 osób." />
             <section className="apartament_content">

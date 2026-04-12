@@ -5,7 +5,7 @@ import Intro from "../components/Intro";
 import WideCard from "../components/WideCard";
 function Breakfest() {
     return (
-        <div className="breakfest">
+        <div className="breakfest main-content">
             <Hero title="Śniadania" bgImage="/img/Śniadanie2.mp4" nextID="#BreakfestIntro" />
             <Intro id="BreakfestIntro" title="Pyszny początek dnia" text="Chcemy tworzyć przeciwwagę dla kultury opartej na jedzeniu typu „fast food” i życia w coraz większym pośpiechu, dlatego dbamy o to co jemy. Nasze śniadania to z zasady jedzenie dla przyjemności, a nie tylko odżywianie się." />
             <SniadaniaGaleria />

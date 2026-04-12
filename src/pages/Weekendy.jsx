@@ -27,7 +27,7 @@ const weekendsData = [
 
 function Weekendy(){
   return (      
-    <div className="weekends">
+    <div className="weekends main-content">
         <Hero title="Weekendy tematyczne" bgImage="/img/Wino.mp4" nextID="#WeekendIntro"/>
         <Intro id="WeekendIntro" title="Świętuj z nami swój weekend" text="W naszej ofercie znajduje się także organizacja weekendów tematycznych. Jeśli znudziły cię już standardowe wakacje, to nasza oferta jest dla Ciebie stworzona!"/>
         <HorizontalSlider data={weekendsData}/>

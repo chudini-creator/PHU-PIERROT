@@ -10,7 +10,7 @@ function Wspolpraca(){
     const styler = `Partners animate-on-scroll ${inView ? 'visible' : ''}`
 
     return (
-        <div className="Wspolpraca">
+        <div className="Wspolpraca main-content">
             <Hero title="Współpraca" bgImage="/img/Wspolpraca.webp" nextID="#PartnersIntro"/>
             <Intro id="PartnersIntro" title="Współpraca jest kluczem" text="Wiemy jak w dzisiejszej dobie ważna jest współpraca. Właśnie dlatego współpracujemy z lokalnymi przedsiębiorstwami."/>
             <div ref={ref} className={styler}>
