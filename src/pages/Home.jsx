@@ -281,14 +281,6 @@ function Home() {
                         </div>
                     </aside>
                 </section>
-
-                <section className="home__final-note">
-                    <Sparkles size={18} />
-                    <p>
-                        PHU PIERROT to połączenie smaku, natury i gościnności — od codziennych zakupów po
-                        wyjątkowe pobyty w Dworze Ujazdowskim.
-                    </p>
-                </section>
             </main>
         </div>
     );

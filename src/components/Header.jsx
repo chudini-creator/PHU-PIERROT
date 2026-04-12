@@ -29,6 +29,9 @@ function Header() {
       <section id="options" className={menuOpen ? "menu-open" : ""}>
         <div id="topbar">
           <div id="left">
+            <Link to="/" aria-label="Przejdź do strony głównej">
+              <img src="/img/logo.webp" alt="Logo Dwor Ujazdowski" className="logo" />
+            </Link>
             <button
               type="button"
               className="menu-toggle"

@@ -69,6 +69,11 @@ header {
   gap: 0.5rem;
 }
 
+#topbar .logo {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
 #topbar #right {
   margin-right: 30px;
   display: flex;
@@ -165,6 +170,12 @@ header {
 }
 
 @media screen and (max-width: 1000px) {
+  #topbar {
+    background-color: var(--font-color);
+    position: sticky;
+    top: 0;
+  }
+
   #topbar #left {
     margin-left: 15px;
   }
