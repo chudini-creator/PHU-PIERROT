@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Intro from "../components/Intro";
 import GreenWhiteSection from "../components/GreenWhiteSection";
 import CtaSection from "../components/CtaSection";
+import { Helmet } from "react-helmet-async";
 function Grupy() {
   const groups_data = [
     {
@@ -25,8 +26,13 @@ function Grupy() {
 
   return (
     <div className="Groups main-content">
-      <Hero title="Grupy zorganizowane" bgImage="/img/GrupyZorganizowane.webp" nextID="#IntroGrupy"/>
-      <Intro id="IntroGrupy" title="Witamy w naszej agroturystyce" text="Zapraszamy grupy zorganizowane do spędzenia niezapomnianego czasu w
+      <Helmet>
+        <title>Noclegi i Oferta dla Grup Zorganizowanych | Dwór Ujazdowski</title>
+        <meta name="description" content="Organizujesz wyjazd integracyjny? Oferujemy kompleksowe noclegi, wyżywienie i atrakcje dla grup zorganizowanych w naszym obiekcie." />
+        <meta property="og:title" content="Grupy zorganizowane w Dworze Ujazdowskim" />
+      </Helmet>
+      <Hero title="Grupy zorganizowane" bgImage="/img/GrupyZorganizowane.webp" nextID="#IntroGrupy" />
+      <Intro id="IntroGrupy" title="Kompleksowa obsługa pobytów dla grup zorganizowanych" text="Zapraszamy grupy zorganizowane do spędzenia niezapomnianego czasu w
             malowniczym otoczeniu, gdzie natura i tradycja tworzą
             niepowtarzalną atmosferę. Nasza agroturystyka to idealne miejsce na
             wyjazdy grupowe, warsztaty, a także rodzinne spotkania. Oferujemy
@@ -34,14 +40,14 @@ function Grupy() {
             zorganizowania ogniska."/>
       <div className="groups_container">
         {groups_data.map((group, index) => (
-                <GreenWhiteSection 
-                    key={index} 
-                    index={index}
-                    title={group.title} 
-                    text={group.text} 
-                    color={group.color} 
-                />
-            ))}
+          <GreenWhiteSection
+            key={index}
+            index={index}
+            title={group.title}
+            text={group.text}
+            color={group.color}
+          />
+        ))}
       </div>
       <CtaSection title="Skontaktuj się z nami" text="Zadzwoń lub napisz do nas, aby zarezerwować miejsce na wakacje." button="Napisz do nas" link="mailto:" phone="tel:691042418" buttonPhone="Zadzwoń do nas" />
     </div>
