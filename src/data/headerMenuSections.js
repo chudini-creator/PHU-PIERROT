@@ -37,7 +37,7 @@ const headerMenuSections = [
         src: "/img/Sniadania/chata5.jpg",
         title: "Śniadania",
         alt: "Oferta śniadań",
-        link: "/śniadania",
+        link: "/sniadania",
       },
       {
         src: "/img/Relaks.webp",
@@ -67,7 +67,7 @@ const headerMenuSections = [
         src: "/img/Wspolpraca.webp",
         title: "Współpraca",
         alt: "Współpraca",
-        link: "/współpraca",
+        link: "/wspolpraca",
       },
     ],
   },
