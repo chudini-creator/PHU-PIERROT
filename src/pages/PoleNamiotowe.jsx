@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Intro from "../components/Intro"
 import CtaSection from "../components/CtaSection";
 import GreenWhiteSection from "../components/GreenWhiteSection";
+import { Helmet } from "react-helmet-async";
 function PoleNamiotowe() {
 
     const PoleData = [
@@ -20,18 +21,23 @@ function PoleNamiotowe() {
 
     return (
         <div className="PoleNamiotowe main-content">
-           <Hero title="Pole namiotowe" bgImage="/img/PoleNamiotowe.webp" nextID="#PoleIntro"/>
-           <Intro id="PoleIntro" title="Skok w przeszłość" text="Zapraszamy do wyjątkowego miejsca, gdzie kontakt z naturą spotyka się z komfortem. Nasze pole namiotowe to idealna propozycja dla tych, którzy pragną poczuć klimat dawnych biwaków, jednocześnie nie rezygnując z wygody." />
+            <Helmet>
+                <title>Pole Namiotowe | Dwór Ujazdowski</title>
+                <meta name="description" content="Ciesz się bliskością natury na naszym polu namiotowym. Zapewniamy dostęp do węzła sanitarnego, miejsce na ognisko i piękne, zielone otoczenie." />
+                <meta property="og:title" content="Pole Namiotowe | Dwór Ujazdowski" />
+            </Helmet>
+            <Hero title="Pole namiotowe" bgImage="/img/PoleNamiotowe.webp" nextID="#PoleIntro" />
+            <Intro id="PoleIntro" title="Malownicze pole namiotowe" text="Zapraszamy do wyjątkowego miejsca, gdzie kontakt z naturą spotyka się z komfortem. Nasze pole namiotowe to idealna propozycja dla tych, którzy pragną poczuć klimat dawnych biwaków, jednocześnie nie rezygnując z wygody." />
             {PoleData.map((Pole, index) => (
-                <GreenWhiteSection 
-                    key={index} 
+                <GreenWhiteSection
+                    key={index}
                     index={index}
-                    title={Pole.title} 
-                    text={Pole.text} 
-                    color={Pole.color} 
+                    title={Pole.title}
+                    text={Pole.text}
+                    color={Pole.color}
                 />
             ))}
-           <CtaSection title="Skontaktuj się z nami" button="Napisz do nas" link="mailto:" phone="tel:"/>
+            <CtaSection title="Skontaktuj się z nami" button="Napisz do nas" link="mailto:" phone="tel:" />
         </div>
 
     )
