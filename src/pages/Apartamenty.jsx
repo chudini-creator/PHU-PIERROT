@@ -2,6 +2,7 @@ import "./apartamenty.css";
 import RoomCard from "../components/RoomCard";
 import Hero from "../components/Hero";
 import Intro from "../components/Intro";
+import { Helmet } from "react-helmet-async";
 function Apartamenty() {
     const Aparts = [
         {
@@ -39,15 +40,20 @@ function Apartamenty() {
         }
     ]
 
-    return(
+    return (
         <div className="apartamenty main-content">
-            <Hero nextID="#ApartIntro" title="Apartamenty w Dworze" bgImage="/img/DwórFront.jpg"/>
+            <Helmet>
+                <title>Noclegi i Pokoje w urokliwym Dworze Ujazdowskim | Dwór Ujazdowski</title>
+                <meta name="description" content="Szukasz wyjątkowego noclegu? Oferujemy przytulne i komfortowe pokoje w zabytkowym dworze. Czysto, spokojnie i z klimatem. Zarezerwuj pobyt!" />
+                <meta property="og:title" content="Noclegi i Pokoje w urokliwym Dworze Ujazdowskim" />
+            </Helmet>
+            <Hero nextID="#ApartIntro" title="Apartamenty w Dworze" bgImage="/img/DwórFront.jpg" />
             <Intro id="ApartIntro" title="Nasze apartamenty" text="Istnieje możliwość wynajęcia całej części agroturystycznej w postaci trzech apartamentów wraz ze strefą Wellness (sauna, wanna z hydromasażem) dla maksymalnie 11 osób." />
             <section className="apartament_content">
                 <h2>Wybierz wyjątkowy apartament dla siebie!</h2>
                 <section className="ApartamentCards">
                     {Aparts.map((apartament, index) => {
-                        return <RoomCard key={index} {...apartament}/>
+                        return <RoomCard key={index} {...apartament} />
                     })}
                 </section>
             </section>
