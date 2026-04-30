@@ -3,7 +3,7 @@ import FeatureCard from '../components/FeatureCard';
 import Hero from '../components/Hero';
 import Intro from '../components/Intro';
 import SniadaniaGaleria from "../components/SniadaniaGaleria";
-
+import { Helmet } from "react-helmet-async";
 const imagesRelaks = [
   { src: "/img/Relaks/Relaks2.webp", alt: "Strefa relaksu 1", itemClass: "item-1" },
   { src: "/img/Relaks/Relaks7.webp", alt: "Strefa relaksu 2", itemClass: "item-2" },
@@ -41,8 +41,13 @@ const features = [
 const StrefaRelaksu = () => {
   return (
     <div className="relax-zone-container main-content">
+      <Helmet>
+        <title>Strefa Relaksu i Wypoczynek w Dworze | Dwór Ujazdowski</title>
+        <meta name="description" content="Zrelaksuj się i odetchnij od codzienności w naszej strefie relaksu. Znajdziesz tu idealne warunki do odnowy biologicznej i pełnego odpoczynku." />
+        <meta property="og:title" content="Strefa relaksu | Dwór Ujazdowski" />
+      </Helmet>
       <Hero nextID="#RelaxIntro" title="Strefa relaksu" bgImage="/img/Relaks.webp" />
-      <Intro id="RelaxIntro" title="Prawdziwe ukojenie dla zmysłów" text="Dwór Ujazdowski to miejsce, w którym zmysły znajdą prawdziwe ukojenie. 
+      <Intro id="RelaxIntro" title="Strefa relaksu – Twój czas na wyciszenie i odpoczynek" text="Dwór Ujazdowski to miejsce, w którym zmysły znajdą prawdziwe ukojenie. 
           Brak aglomeracyjnych świateł i hałasu gwarantują pełen odpoczynek 
           od zgiełku codziennego, miejskiego życia."/>
       <section className="features-section">
@@ -51,7 +56,7 @@ const StrefaRelaksu = () => {
         )
         )}
       </section>
-      <SniadaniaGaleria id="RelaxGallery" images={imagesRelaks}/>
+      <SniadaniaGaleria id="RelaxGallery" images={imagesRelaks} />
       <CtaSection title="Gotowi na odpoczynek?" text="Skontaktuj się z nami i zarezerwuj swój pobyt w Dworze Ujazdowskim." button="Zarezerwuj teraz" />
     </div>
   );
