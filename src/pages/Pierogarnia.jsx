@@ -2,11 +2,17 @@ import "./pierogarnia.css"
 import Hero from "../components/Hero";
 import ShopCard from "../components/ShopCard";
 import Intro from "../components/Intro";
-function Pierogarnia(){
-    return(
+import { Helmet } from "react-helmet-async";
+function Pierogarnia() {
+    return (
         <div className="pierogarnia main-content">
-            <Hero title="Pierogarnia" bgImage="/img/Pierogarnia/Pierogarnia.webp" nextID="#pierogarniaContent"/>
-            <Intro id="pierogarniaContent" title="Nasza pierogarnia" text="Nasze pierogi powstają z pasją, która bulgocze w garnkach i pachnie w całej pierogarni. Każde ciasto jest ręcznie wałkowane, każdy farsz doprawiany tak, by rozpalał zmysły. To smak, który przyciąga, kusi i zostaje w pamięci na długo. Przyjdź i poczuj tę gorącą, pierogową energię!"/>
+            <Helmet>
+                <title>Domowa Pierogarnia Chełm | PHU Pierrot</title>
+                <meta name="description" content="Zapraszamy do naszej pierogarni! Oferujemy ręcznie lepione, tradycyjne pierogi z najlepszych lokalnych składników. Sprawdź nasze menu!" />
+                <meta property="og:title" content="Domowa Pierogarnia Chełm" />
+            </Helmet>
+            <Hero title="Pierogarnia" bgImage="/img/Pierogarnia/Pierogarnia.webp" nextID="#pierogarniaContent" />
+            <Intro id="pierogarniaContent" title="Pyszna Pierogarnia – Tradycyjny smak w każdym kęsie" text="Nasze pierogi powstają z pasją, która bulgocze w garnkach i pachnie w całej pierogarni. Każde ciasto jest ręcznie wałkowane, każdy farsz doprawiany tak, by rozpalał zmysły. To smak, który przyciąga, kusi i zostaje w pamięci na długo. Przyjdź i poczuj tę gorącą, pierogową energię!" />
             <div className="pierogarnia_content">
                 <div className="pierogarnia_photos">
                     <img src="/img/Pierogarnia/Pierogarnia2.webp" alt="Pierogarnia - zdjęcie 1" className="pierogarnia_photo" loading="lazy" decoding="async" />
