@@ -2,6 +2,7 @@ import "./Weekendy.css"
 import Hero from "../components/Hero"
 import Intro from "../components/Intro"
 import HorizontalSlider from "../components/HorizontalSlider";
+import { Helmet } from "react-helmet-async";
 const weekendsData = [
   {
     title: 'Weekend z winem',
@@ -25,12 +26,17 @@ const weekendsData = [
   },
 ];
 
-function Weekendy(){
-  return (      
+function Weekendy() {
+  return (
     <div className="weekends main-content">
-        <Hero title="Weekendy tematyczne" bgImage="/img/Wino.mp4" nextID="#WeekendIntro"/>
-        <Intro id="WeekendIntro" title="Świętuj z nami swój weekend" text="W naszej ofercie znajduje się także organizacja weekendów tematycznych. Jeśli znudziły cię już standardowe wakacje, to nasza oferta jest dla Ciebie stworzona!"/>
-        <HorizontalSlider data={weekendsData}/>
+      <Helmet>
+        <title>Weekendy Tematyczne w Dworze | Dwór Ujazdowski</title>
+        <meta name="description" content="Spędź niezapomniany czas podczas naszych weekendów tematycznych! Czekają na Ciebie unikalne atrakcje, warsztaty i wyśmienite, regionalne jedzenie." />
+        <meta property="og:title" content="Weekendy tematyczne | Dwór Ujazdowski" />
+      </Helmet>
+      <Hero title="Weekendy tematyczne" bgImage="/img/Wino.mp4" nextID="#WeekendIntro" />
+      <Intro id="WeekendIntro" title="Niezapomniane weekendy tematyczne w naszym Dworze" text="W naszej ofercie znajduje się także organizacja weekendów tematycznych. Jeśli znudziły cię już standardowe wakacje, to nasza oferta jest dla Ciebie stworzona!" />
+      <HorizontalSlider data={weekendsData} />
     </div>
   );
 };
