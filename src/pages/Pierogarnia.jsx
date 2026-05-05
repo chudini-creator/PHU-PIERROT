@@ -7,12 +7,14 @@ function Pierogarnia() {
     return (
         <div className="pierogarnia main-content">
             <Helmet>
-                <title>Domowa Pierogarnia Chełm | PHU Pierrot</title>
-                <meta name="description" content="Zapraszamy do naszej pierogarni! Oferujemy ręcznie lepione, tradycyjne pierogi z najlepszych lokalnych składników. Sprawdź nasze menu!" />
-                <meta property="og:title" content="Domowa Pierogarnia Chełm" />
+                <title>Manufaktura Pierogów i Wyrobów Garmażeryjnych Chełm | PHU Pierrot</title>
+                <meta name="description" content="Tradycyjne, ręcznie lepione pierogi, paszteciki i domowe obiady. Nasza manufaktura to smak regionu dostępny w sklepach PHU Pierrot w Chełmie. Sprawdź naszą ofertę!" />
+                <link rel="canonical" href="https://phupierrot.pl/pierogarnia" />
+                <meta property="og:title" content="Manufaktura Pierogów i Wyrobów Garmażeryjnych Chełm" />
+                <meta property="og:description" content="Ręcznie lepione pierogi i tradycyjne wyroby garmażeryjne prosto z naszej manufaktury do Twojego stołu." />
             </Helmet>
             <Hero title="Pierogarnia" bgImage="/img/Pierogarnia/Pierogarnia.webp" nextID="#pierogarniaContent" />
-            <Intro id="pierogarniaContent" title="Pyszna Pierogarnia – Tradycyjny smak w każdym kęsie" text="Nasze pierogi powstają z pasją, która bulgocze w garnkach i pachnie w całej pierogarni. Każde ciasto jest ręcznie wałkowane, każdy farsz doprawiany tak, by rozpalał zmysły. To smak, który przyciąga, kusi i zostaje w pamięci na długo. Przyjdź i poczuj tę gorącą, pierogową energię!" />
+            <Intro id="pierogarniaContent" title="Tradycyjna Pierogarnia – Smak regionu w każdym kęsie" text="Nasze wyroby powstają z pasją, która bulgocze w garnkach i pachnie w całej manufakturze. Każde ciasto jest ręcznie wałkowane, każdy farsz doprawiany tak, by rozpalał zmysły. To tradycyjna garmażerka, która trafia prosto do naszych sklepów, by cieszyć Państwa podniebienia codziennie świeżymi pierogami i daniami obiadowymi." />
             <div className="pierogarnia_content">
                 <div className="pierogarnia_photos">
                     <img src="/img/Pierogarnia/Pierogarnia2.webp" alt="Pierogarnia - zdjęcie 1" className="pierogarnia_photo" loading="lazy" decoding="async" />

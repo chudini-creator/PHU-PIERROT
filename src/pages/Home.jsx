@@ -1,5 +1,6 @@
 import "./home.css";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
     ArrowUpRight,
     BedDouble,
@@ -118,6 +119,66 @@ const ctaHighlights = [
 function Home() {
     return (
         <div className="home">
+            <Helmet>
+                <title>PHU Pierrot | Dwór Ujazdowski, Pierogarnia i Lokalne Sklepy Chełm</title>
+                <meta name="description" content="Odkryj Dwór Ujazdowski – butikowe noclegi, strefę relaksu i tradycyjną kuchnię. Poznaj naszą manufakturę pierogów i odwiedź nasze sklepy w Chełmie. Zapraszamy!" />
+                <link rel="canonical" href="https://phupierrot.pl/" />
+                
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://phupierrot.pl/" />
+                <meta property="og:title" content="PHU Pierrot | Dwór Ujazdowski, Pierogarnia i Sklepy Chełm" />
+                <meta property="og:description" content="Butikowe noclegi w Dworze Ujazdowskim, tradycyjna manufaktura pierogów i lokalne sklepy w Chełmie. Poczuj klimat regionu!" />
+                <meta property="og:image" content="https://phupierrot.pl/img/Dwór.jpg" />
+
+                {/* JSON-LD Structured Data */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [
+                            {
+                                "@type": "LodgingBusiness",
+                                "@id": "https://phupierrot.pl/#lodging",
+                                "name": "Dwór Ujazdowski - PHU Pierrot",
+                                "description": "Butikowe noclegi i apartamenty w zabytkowym dworze na Lubelszczyźnie.",
+                                "url": "https://phupierrot.pl/pokoje",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": "Ujazdów",
+                                    "addressRegion": "Lubelskie",
+                                    "postalCode": "22-375",
+                                    "addressCountry": "PL"
+                                },
+                                "telephone": "+48691042418",
+                                "image": "https://phupierrot.pl/img/Dwór.jpg"
+                            },
+                            {
+                                "@type": "LocalBusiness",
+                                "@id": "https://phupierrot.pl/#manufacture",
+                                "name": "Manufaktura PHU Pierrot",
+                                "description": "Tradycyjna manufaktura wyrobów garmażeryjnych - ręcznie lepione pierogi i domowe obiady.",
+                                "url": "https://phupierrot.pl/pierogarnia",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": "Chełm",
+                                    "addressRegion": "Lubelskie",
+                                    "postalCode": "22-100",
+                                    "addressCountry": "PL"
+                                },
+                                "telephone": "+48691042418"
+                            }
+                        ]
+                    })}
+                </script>
+
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://phupierrot.pl/" />
+                <meta property="twitter:title" content="PHU Pierrot | Dwór Ujazdowski i Tradycyjna Kuchnia" />
+                <meta property="twitter:description" content="Noclegi premium, strefa wellness i ręcznie lepione pierogi. Zapraszamy do PHU Pierrot." />
+                <meta property="twitter:image" content="https://phupierrot.pl/img/Dwór.jpg" />
+            </Helmet>
+
             <Hero title="PHU PIERROT" bgImage="/img/Dwór.jpg" nextID="#landing__id" />
 
             <main className="home__main" id="landing__id">
@@ -227,7 +288,7 @@ function Home() {
                         <article>
                             <h4>Piekarnia w Nieliszu</h4>
                             <p>Świeże, codzienne wypieki, które dopełniają nasze śniadania.</p>
-                            <Link to="/śniadania">Zobacz śniadania</Link>
+                            <Link to="/sniadania">Zobacz śniadania</Link>
                         </article>
                     </div>
                 </section>
@@ -274,7 +335,7 @@ function Home() {
                                 Oferta dla grup
                                 <ArrowUpRight size={16} />
                             </Link>
-                            <Link className="home__cta-btn" to="/współpraca">
+                            <Link className="home__cta-btn" to="/wspolpraca">
                                 Współpraca
                                 <ArrowUpRight size={16} />
                             </Link>

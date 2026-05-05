@@ -7,9 +7,11 @@ function Sklepy() {
   return (
     <div className="sklepy">
       <Helmet>
-        <title>Nasze Sklepy w Chełmie | PHU Pierrot</title>
-        <meta name="description" content="Odwiedź nasze sklepy stacjonarne. Oferujemy zawsze świeże produkty, lokalne wyroby i codziennie zaopatrzone półki. Sprawdź lokalizacje." />
-        <meta property="og:title" content="Sklepy | Dwór Ujazdowski" />
+        <title>Sklepy PHU Pierrot w Chełmie | Świeże Wyroby Garmażeryjne</title>
+        <meta name="description" content="Odwiedź nasze sklepy w Chełmie (ul. Wołyńska, ul. Zachodnia). Codziennie świeże pierogi, paszteciki i wyroby garmażeryjne prosto z naszej manufaktury. Zapraszamy!" />
+        <link rel="canonical" href="https://phupierrot.pl/sklepy" />
+        <meta property="og:title" content="Sklepy PHU Pierrot w Chełmie" />
+        <meta property="og:description" content="Codziennie świeże wyroby garmażeryjne w dwóch lokalizacjach w Chełmie. Sprawdź godziny otwarcia!" />
       </Helmet>
       <Hero title="Nasze sklepy" bgImage="/img/pierogi/IMG_2865.jpeg" nextID="#sklepyContent" />
       <Intro title="Nasze sklepy – Świeżość i jakość blisko Ciebie" text="Oferujemy zawsze świeże produkty, lokalne wyroby i codziennie zaopatrzone półki. Sprawdź lokalizacje naszych sklepów i odwiedź nas już dziś!" />

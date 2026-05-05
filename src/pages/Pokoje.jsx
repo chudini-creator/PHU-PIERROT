@@ -159,10 +159,13 @@ function Pokoje() {
   return (
     <div className="pokoje main-content">
       <Helmet>
-        <title>Noclegi i Pokoje w urokliwym Dworze | Dwór Ujazdowski</title>
-        <meta name="description" content="Szukasz wyjątkowego noclegu? Oferujemy przytulne i komfortowe pokoje w zabytkowym dworze. Czysto, spokojnie i z klimatem. Zarezerwuj pobyt!" />
-        <meta property="og:title" content="Noclegi i Pokoje w urokliwym Dworze | Dwór Ujazdowski" />
+        <title>Butikowe Noclegi i Pokoje w Dworze Ujazdowskim | Lubelskie</title>
+        <meta name="description" content="Szukasz klimatycznego noclegu na Lubelszczyźnie? Oferujemy unikalne pokoje w zabytkowym Dworze Ujazdowskim. Cisza, natura i domowa atmosfera. Zarezerwuj swój pobyt!" />
+        <link rel="canonical" href="https://phupierrot.pl/pokoje" />
+        <meta property="og:title" content="Butikowe Noclegi i Pokoje | Dwór Ujazdowski" />
+        <meta property="og:description" content="Odpocznij w sercu Lubelszczyzny. Komfortowe pokoje z duszą w zabytkowym dworze." />
       </Helmet>
+
       <Hero title="Nasze pokoje" bgImage="/img/pokoje.webp" nextID="#PokojeIntro" />
       <Intro title="Komfortowe pokoje w naszym Gościńcu" text="Dysponujemy komfortowo urządzonymi pokojami. Panuje u nas ciepła i domowa atmosfera, która sprzyja wypoczynkowi z dala od wielkomiejskiego hałasu.
                         W butikowo urządzonych pokojach połączono nowoczesność z tradycją. Niepowtarzalne pokoje – więcej niż tylko miejsce do spania." id="PokojeIntro" />

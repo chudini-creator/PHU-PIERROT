@@ -43,10 +43,13 @@ function Apartamenty() {
     return (
         <div className="apartamenty main-content">
             <Helmet>
-                <title>Noclegi i Pokoje w urokliwym Dworze Ujazdowskim | Dwór Ujazdowski</title>
-                <meta name="description" content="Szukasz wyjątkowego noclegu? Oferujemy przytulne i komfortowe pokoje w zabytkowym dworze. Czysto, spokojnie i z klimatem. Zarezerwuj pobyt!" />
-                <meta property="og:title" content="Noclegi i Pokoje w urokliwym Dworze Ujazdowskim" />
+                <title>Apartamenty Premium z Wellness | Dwór Ujazdowski</title>
+                <meta name="description" content="Wynajmij całą część apartamentową w Dworze Ujazdowskim. 3 apartamenty, strefa wellness (sauna, jacuzzi) dla 11 osób. Idealne na rodzinny wyjazd lub grupę znajomych." />
+                <link rel="canonical" href="https://phupierrot.pl/apartamenty" />
+                <meta property="og:title" content="Apartamenty Premium z Wellness | Dwór Ujazdowski" />
+                <meta property="og:description" content="Luksusowe apartamenty na wyłączność. Prywatna strefa relaksu i komfort dla grup do 11 osób." />
             </Helmet>
+
             <Hero nextID="#ApartIntro" title="Apartamenty w Dworze" bgImage="/img/DwórFront.jpg" />
             <Intro id="ApartIntro" title="Nasze apartamenty" text="Istnieje możliwość wynajęcia całej części agroturystycznej w postaci trzech apartamentów wraz ze strefą Wellness (sauna, wanna z hydromasażem) dla maksymalnie 11 osób." />
             <section className="apartament_content">

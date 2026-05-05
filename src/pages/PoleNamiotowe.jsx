@@ -22,9 +22,15 @@ function PoleNamiotowe() {
     return (
         <div className="PoleNamiotowe main-content">
             <Helmet>
-                <title>Pole Namiotowe | Dwór Ujazdowski</title>
-                <meta name="description" content="Ciesz się bliskością natury na naszym polu namiotowym. Zapewniamy dostęp do węzła sanitarnego, miejsce na ognisko i piękne, zielone otoczenie." />
-                <meta property="og:title" content="Pole Namiotowe | Dwór Ujazdowski" />
+                <title>Pole Namiotowe | Dwór Ujazdowski Lubelskie</title>
+                <meta name="description" content="Nocleg pod gwiazdami na Lubelszczyźnie. Pole namiotowe przy Dworze Ujazdowskim niedaleko Zamościa. Natura, cisza i bliskość rzeki Wieprz." />
+                <link rel="canonical" href="https://phupierrot.pl/pole-namiotowe" />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://phupierrot.pl/pole-namiotowe" />
+                <meta property="og:title" content="Pole Namiotowe | Dwór Ujazdowski Lubelskie" />
+                <meta property="og:description" content="Nocleg pod gwiazdami na Lubelszczyźnie. Pole namiotowe przy Dworze Ujazdowskim niedaleko Zamościa. Natura, cisza i bliskość rzeki Wieprz." />
             </Helmet>
             <Hero title="Pole namiotowe" bgImage="/img/PoleNamiotowe.webp" nextID="#PoleIntro" />
             <Intro id="PoleIntro" title="Malownicze pole namiotowe" text="Zapraszamy do wyjątkowego miejsca, gdzie kontakt z naturą spotyka się z komfortem. Nasze pole namiotowe to idealna propozycja dla tych, którzy pragną poczuć klimat dawnych biwaków, jednocześnie nie rezygnując z wygody." />

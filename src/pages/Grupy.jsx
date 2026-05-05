@@ -27,9 +27,15 @@ function Grupy() {
   return (
     <div className="Groups main-content">
       <Helmet>
-        <title>Noclegi i Oferta dla Grup Zorganizowanych | Dwór Ujazdowski</title>
-        <meta name="description" content="Organizujesz wyjazd integracyjny? Oferujemy kompleksowe noclegi, wyżywienie i atrakcje dla grup zorganizowanych w naszym obiekcie." />
-        <meta property="og:title" content="Grupy zorganizowane w Dworze Ujazdowskim" />
+        <title>Grupy Zorganizowane | Dwór Ujazdowski Lubelskie</title>
+        <meta name="description" content="Oferta dla grup zorganizowanych w Dworze Ujazdowskim. Imprezy okolicznościowe, szkolenia i integracje w sercu Lubelszczyzny. Zapraszamy!" />
+        <link rel="canonical" href="https://phupierrot.pl/grupy-zorganizowane" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://phupierrot.pl/grupy-zorganizowane" />
+        <meta property="og:title" content="Grupy Zorganizowane | Dwór Ujazdowski Lubelskie" />
+        <meta property="og:description" content="Oferta dla grup zorganizowanych w Dworze Ujazdowskim. Imprezy okolicznościowe, szkolenia i integracje w sercu Lubelszczyzny. Zapraszamy!" />
       </Helmet>
       <Hero title="Grupy zorganizowane" bgImage="/img/GrupyZorganizowane.webp" nextID="#IntroGrupy" />
       <Intro id="IntroGrupy" title="Kompleksowa obsługa pobytów dla grup zorganizowanych" text="Zapraszamy grupy zorganizowane do spędzenia niezapomnianego czasu w

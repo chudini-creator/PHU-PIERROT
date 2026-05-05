@@ -42,9 +42,15 @@ const StrefaRelaksu = () => {
   return (
     <div className="relax-zone-container main-content">
       <Helmet>
-        <title>Strefa Relaksu i Wypoczynek w Dworze | Dwór Ujazdowski</title>
-        <meta name="description" content="Zrelaksuj się i odetchnij od codzienności w naszej strefie relaksu. Znajdziesz tu idealne warunki do odnowy biologicznej i pełnego odpoczynku." />
-        <meta property="og:title" content="Strefa relaksu | Dwór Ujazdowski" />
+        <title>Strefa Relaksu & Wellness | Dwór Ujazdowski Lubelskie</title>
+        <meta name="description" content="Odpocznij w naszej strefie relaksu. Jacuzzi, sauna i piękny ogród w Dworze Ujazdowskim niedaleko Zamościa. Idealny slow life na Lubelszczyźnie." />
+        <link rel="canonical" href="https://phupierrot.pl/strefa-relaksu" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://phupierrot.pl/strefa-relaksu" />
+        <meta property="og:title" content="Strefa Relaksu & Wellness | Dwór Ujazdowski Lubelskie" />
+        <meta property="og:description" content="Odpocznij w naszej strefie relaksu. Jacuzzi, sauna i piękny ogród w Dworze Ujazdowskim niedaleko Zamościa. Idealny slow life na Lubelszczyźnie." />
       </Helmet>
       <Hero nextID="#RelaxIntro" title="Strefa relaksu" bgImage="/img/Relaks.webp" />
       <Intro id="RelaxIntro" title="Strefa relaksu – Twój czas na wyciszenie i odpoczynek" text="Dwór Ujazdowski to miejsce, w którym zmysły znajdą prawdziwe ukojenie. 

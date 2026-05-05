@@ -13,9 +13,15 @@ function Wspolpraca() {
     return (
         <div className="Wspolpraca main-content">
             <Helmet>
-                <title>Nasi Partnerzy i Atrakcje Okolicy | Dwór Ujazdowski</title>
-                <meta name="description" content="Współpracujemy z najlepszymi! Poznaj naszych zaufanych partnerów: lokalne piekarnie, winiarnie oraz organizatorów spływów kajakowych." />
-                <meta property="og:title" content="Nasi Partnerzy i Atrakcje Okolicy | Dwór Ujazdowski" />
+                <title>Współpraca | Dwór Ujazdowski & PHU Pierrot Lubelskie</title>
+                <meta name="description" content="Zapraszamy do współpracy lokalnych dostawców i partnerów. Twórzmy razem wyjątkowe miejsce na mapie Lubelszczyzny. Skontaktuj się z nami!" />
+                <link rel="canonical" href="https://phupierrot.pl/wspolpraca" />
+                
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://phupierrot.pl/wspolpraca" />
+                <meta property="og:title" content="Współpraca | Dwór Ujazdowski & PHU Pierrot Lubelskie" />
+                <meta property="og:description" content="Zapraszamy do współpracy lokalnych dostawców i partnerów. Twórzmy razem wyjątkowe miejsce na mapie Lubelszczyzny. Skontaktuj się z nami!" />
             </Helmet>
             <Hero title="Współpraca" bgImage="/img/Wspolpraca.webp" nextID="#PartnersIntro" />
             <Intro id="PartnersIntro" title="Nasi zaufani partnerzy i lokalne atrakcje" text="Wiemy jak w dzisiejszej dobie ważna jest współpraca. Właśnie dlatego współpracujemy z lokalnymi przedsiębiorstwami." />

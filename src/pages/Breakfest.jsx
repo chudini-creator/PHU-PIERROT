@@ -8,9 +8,15 @@ function Breakfest() {
     return (
         <div className="breakfest main-content">
             <Helmet>
-                <title>Pyszne Śniadania dla Gości Dworu | Dwór Ujazdowski</title>
-                <meta name="description" content="Zacznij dzień od pożywnego śniadania! Serwujemy świeże, lokalne produkty przygotowane z sercem. Sprawdź ofertę śniadaniową dla naszych gości." />
-                <meta property="og:title" content="Pyszne Śniadania dla Gości Dworu" />
+                <title>Regionalne Śniadania | Dwór Ujazdowski Lubelskie</title>
+                <meta name="description" content="Pyszne, regionalne śniadania w Dworze Ujazdowskim. Produkty od lokalnych dostawców z Lubelszczyzny. Zacznij dzień ze smakiem!" />
+                <link rel="canonical" href="https://phupierrot.pl/sniadania" />
+                
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://phupierrot.pl/sniadania" />
+                <meta property="og:title" content="Regionalne Śniadania | Dwór Ujazdowski Lubelskie" />
+                <meta property="og:description" content="Pyszne, regionalne śniadania w Dworze Ujazdowskim. Produkty od lokalnych dostawców z Lubelszczyzny. Zacznij dzień ze smakiem!" />
             </Helmet>
             <Hero title="Śniadania" bgImage="/img/Śniadanie2.mp4" nextID="#BreakfestIntro" />
             <Intro id="BreakfestIntro" title="Pyszne i pożywne śniadania z lokalnych produktów" text="Chcemy tworzyć przeciwwagę dla kultury opartej na jedzeniu typu „fast food” i życia w coraz większym pośpiechu, dlatego dbamy o to co jemy. Nasze śniadania to z zasady jedzenie dla przyjemności, a nie tylko odżywianie się." />
