@@ -19,7 +19,7 @@ const offerCards = [
     {
         title: "Pierogarnia",
         description: "Ręcznie lepione pierogi i tradycyjne smaki, które pachną domem.",
-        image: "/img/Pierogarnia/pierogarnia.jpg",
+        image: "/img/Pierogarnia/Pierogarnia2.webp",
         link: "/pierogarnia",
         label: "Nasza Chata",
         icon: UtensilsCrossed,
@@ -33,7 +33,7 @@ const offerCards = [
         icon: MapPin,
     },
     {
-        title: "Pokoje w Dworze",
+        title: "Pokoje w Gościńcu",
         description: "Butikowe wnętrza i kameralny wypoczynek z dala od miejskiego zgiełku.",
         image: "/img/pokoje.webp",
         link: "/pokoje",
@@ -129,7 +129,7 @@ function Home() {
                 <meta property="og:url" content="https://phupierrot.pl/" />
                 <meta property="og:title" content="PHU Pierrot | Dwór Ujazdowski, Pierogarnia i Sklepy Chełm" />
                 <meta property="og:description" content="Butikowe noclegi w Dworze Ujazdowskim, tradycyjna manufaktura pierogów i lokalne sklepy w Chełmie. Poczuj klimat regionu!" />
-                <meta property="og:image" content="https://phupierrot.pl/img/Dwór.jpg" />
+                <meta property="og:image" content="https://phupierrot.pl/img/dwórGóra.webp" />
 
                 {/* JSON-LD Structured Data */}
                 <script type="application/ld+json">
@@ -150,7 +150,7 @@ function Home() {
                                     "addressCountry": "PL"
                                 },
                                 "telephone": "+48691042418",
-                                "image": "https://phupierrot.pl/img/Dwór.jpg"
+                                "image": "https://phupierrot.pl/img/dwórGóra.webp"
                             },
                             {
                                 "@type": "LocalBusiness",
@@ -171,15 +171,14 @@ function Home() {
                     })}
                 </script>
 
-                {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://phupierrot.pl/" />
                 <meta property="twitter:title" content="PHU Pierrot | Dwór Ujazdowski i Tradycyjna Kuchnia" />
                 <meta property="twitter:description" content="Noclegi premium, strefa wellness i ręcznie lepione pierogi. Zapraszamy do PHU Pierrot." />
-                <meta property="twitter:image" content="https://phupierrot.pl/img/Dwór.jpg" />
+                <meta property="twitter:image" content="https://phupierrot.pl/img/dwórGóra.webp" />
             </Helmet>
 
-            <Hero title="PHU PIERROT" bgImage="/img/Dwór.jpg" nextID="#landing__id" />
+            <Hero title="PHU PIERROT" bgImage="/img/dwórGóra.webp" nextID="#landing__id" />
 
             <main className="home__main" id="landing__id">
                 <section className="home__intro">

@@ -50,7 +50,7 @@ function Apartamenty() {
                 <meta property="og:description" content="Luksusowe apartamenty na wyłączność. Prywatna strefa relaksu i komfort dla grup do 11 osób." />
             </Helmet>
 
-            <Hero nextID="#ApartIntro" title="Apartamenty w Dworze" bgImage="/img/DwórFront.jpg" />
+            <Hero nextID="#ApartIntro" title="Apartamenty w Dworze" bgImage="/img/DwórFront.webp" />
             <Intro id="ApartIntro" title="Nasze apartamenty" text="Istnieje możliwość wynajęcia całej części agroturystycznej w postaci trzech apartamentów wraz ze strefą Wellness (sauna, wanna z hydromasażem) dla maksymalnie 11 osób." />
             <section className="apartament_content">
                 <h2>Wybierz wyjątkowy apartament dla siebie!</h2>

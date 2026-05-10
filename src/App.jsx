@@ -2,7 +2,7 @@ import '@fontsource/lato/300.css';
 import '@fontsource/lato/400.css';
 import '@fontsource/poppins/400.css';
 import '@fontsource/poppins/500.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from "./components/Header";
@@ -22,24 +22,58 @@ const Weekendy = lazy(() => import("./pages/Weekendy"));
 const WinnicaZamojska = lazy(() => import("./pages/WinnicaZamojska"));
 const PoleNamiotowe = lazy(() => import("./pages/PoleNamiotowe"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-function App() {
+const DofProj = lazy(() => import("./pages/DofProj"));
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+function AnimationObserver() {
+  const { pathname } = useLocation();
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          // Raz pokazany element nie musi być już obserwowany
+          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-    elementsToAnimate.forEach(el => observer.observe(el));
+    const observeElements = () => {
+      const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+      elementsToAnimate.forEach(el => {
+        // Jeśli element jest już widoczny, nie obserwuj go
+        if (!el.classList.contains('visible')) {
+          observer.observe(el);
+        }
+      });
+    };
 
-    return () => elementsToAnimate.forEach(el => observer.unobserve(el));
-  }, []);
+    // Obserwuj natychmiast i po krótkim czasie dla lazy loading
+    observeElements();
+    const timeoutId = setTimeout(observeElements, 500);
+
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
+    };
+  }, [pathname]);
+
+  return null;
+}
+
+function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+        <ScrollToTop />
+        <AnimationObserver />
         <Header />
         <Suspense
           fallback={
@@ -62,6 +96,7 @@ function App() {
             <Route path="/weekendy-tematyczne" element={<Weekendy />} />
             <Route path="/winnica-zamojska" element={<WinnicaZamojska />} />
             <Route path="/pole-namiotowe" element={<PoleNamiotowe />} />
+            <Route path="/dofinansowania-projekty" element={<DofProj />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

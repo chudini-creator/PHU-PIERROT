@@ -28,9 +28,9 @@ const headerMenuSections = [
         link: "/pokoje",
       },
       {
-        src: "/img/DwórFront.jpg",
-        title: "Apartamenty na wyłączność",
-        alt: "Apartamenty na wyłączność",
+        src: "/img/DwórFront.webp",
+        title: "Apartamenty w Dworze na wyłączność",
+        alt: "Apartamenty w Dworze na wyłączność",
         link: "/apartamenty",
       },
       {
@@ -69,6 +69,12 @@ const headerMenuSections = [
         alt: "Współpraca",
         link: "/wspolpraca",
       },
+      {
+        src: "/img/dwórGóra.webp",
+        title: "Dofinansowania i Projekty",
+        alt: "Dofinansowania i Projekty",
+        link: "/dofinansowania-projekty",
+      }
     ],
   },
 ];
