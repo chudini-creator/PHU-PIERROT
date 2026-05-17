@@ -46,8 +46,11 @@ function Apartamenty() {
                 <title>Apartamenty Premium z Wellness | Dwór Ujazdowski</title>
                 <meta name="description" content="Wynajmij całą część apartamentową w Dworze Ujazdowskim. 3 apartamenty, strefa wellness (sauna, jacuzzi) dla 11 osób. Idealne na rodzinny wyjazd lub grupę znajomych." />
                 <link rel="canonical" href="https://phupierrot.pl/apartamenty" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://phupierrot.pl/apartamenty" />
                 <meta property="og:title" content="Apartamenty Premium z Wellness | Dwór Ujazdowski" />
                 <meta property="og:description" content="Luksusowe apartamenty na wyłączność. Prywatna strefa relaksu i komfort dla grup do 11 osób." />
+                <meta property="og:image" content="https://phupierrot.pl/img/DwórFront.webp" />
             </Helmet>
 
             <Hero nextID="#ApartIntro" title="Apartamenty w Dworze" bgImage="/img/DwórFront.webp" />
