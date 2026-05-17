@@ -38,7 +38,8 @@ function Weekendy() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://phupierrot.pl/weekendy-tematyczne" />
         <meta property="og:title" content="Weekendy Tematyczne | Dwór Ujazdowski Lubelskie" />
-        <meta property="og:description" content="Wyjątkowe weekendy tematyczne w Dworze Ujazdowskim. Warsztaty, teatr, wino i relaks na Lubelszczyźnie. Sprawdź kalendarz wydarzeń!" />
+        <meta property="og:description" content="Wyjątkowe weekendy tematyczne: wino, malowanie, teatr i relaks w Dworze Ujazdowskim." />
+        <meta property="og:image" content="https://phupierrot.pl/img/Tematyczne.webp" />
       </Helmet>
       <Hero title="Weekendy tematyczne" bgImage="/img/Wino.mp4" nextID="#WeekendIntro" />
       <Intro id="WeekendIntro" title="Niezapomniane weekendy tematyczne w naszym Dworze" text="W naszej ofercie znajduje się także organizacja weekendów tematycznych. Jeśli znudziły cię już standardowe wakacje, to nasza oferta jest dla Ciebie stworzona!" />
