@@ -121,7 +121,7 @@ function Home() {
         <div className="home">
             <Helmet>
                 <title>PHU Pierrot | Dwór Ujazdowski, Pierogarnia i Lokalne Sklepy Chełm</title>
-                <meta name="description" content="Odkryj Dwór Ujazdowski – butikowe noclegi, strefę relaksu i tradycyjną kuchnię. Poznaj naszą manufakturę pierogów i odwiedź nasze sklepy w Chełmie. Zapraszamy!" />
+                <meta name="description" content="Odkryj Dwór Ujazdowski – butikowe noclegi, strefę relaksu i tradycyjną kuchnię. Poznaj naszą manufakturę pierogów i odwiedź nasze sklepy w Chełmie. Zapraszamy do serca Lubelszczyzny!" />
                 <link rel="canonical" href="https://phupierrot.pl/" />
                 
                 {/* Open Graph / Facebook */}
