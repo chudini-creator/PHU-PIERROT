@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./footer.css";
 
 function Footer() {
@@ -15,8 +16,28 @@ function Footer() {
 
         <div className="footer__grid">
           <section className="footer__column">
-            <h3>Nasze sklepy</h3>
+            <h3>Oferta</h3>
+            <nav className="footer__nav" aria-label="Menu stopek">
+              <ul style={{ listStyle: 'none' }}>
+                <li><Link to="/">Strona główna</Link></li>
+                <li><Link to="/pierogarnia">Pierogarnia</Link></li>
+                <li><Link to="/sklepy">Nasze sklepy</Link></li>
+                <li><Link to="/pokoje">Pokoje w Gościńcu</Link></li>
+                <li><Link to="/apartamenty">Apartamenty w Dworze</Link></li>
+                <li><Link to="/sniadania">Regionalne śniadania</Link></li>
+                <li><Link to="/strefa-relaksu">Strefa relaksu</Link></li>
+                <li><Link to="/grupy-zorganizowane">Grupy zorganizowane</Link></li>
+                <li><Link to="/pole-namiotowe">Pole namiotowe</Link></li>
+                <li><Link to="/weekendy-tematyczne">Weekendy tematyczne</Link></li>
+                <li><Link to="/winnica-zamojska">Winnica Zamojska</Link></li>
+                <li><Link to="/wspolpraca">Współpraca</Link></li>
+                <li><Link to="/dofinansowania-projekty">Dofinansowania i Projekty</Link></li>
+              </ul>
+            </nav>
+          </section>
 
+          <section className="footer__column">
+            <h3>Nasze sklepy</h3>
             <address className="footer__item">
               <p>ul. Wołyńska 23, Chełm</p>
               <p>Godziny otwarcia: 9:30 - 16:30</p>
