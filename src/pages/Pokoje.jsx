@@ -159,11 +159,14 @@ function Pokoje() {
   return (
     <div className="pokoje main-content">
       <Helmet>
-        <title>Butikowe Noclegi i Pokoje w Gościńcu| Lubelskie</title>
+        <title>Butikowe Noclegi i Pokoje w Gościńcu | Dwór Ujazdowski</title>
         <meta name="description" content="Szukasz klimatycznego noclegu na Lubelszczyźnie? Oferujemy unikalne pokoje w zabytkowym Dworze Ujazdowskim. Cisza, natura i domowa atmosfera. Zarezerwuj swój pobyt!" />
         <link rel="canonical" href="https://phupierrot.pl/pokoje" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://phupierrot.pl/pokoje" />
         <meta property="og:title" content="Butikowe Noclegi i Pokoje | Dwór Ujazdowski" />
         <meta property="og:description" content="Odpocznij w sercu Lubelszczyzny. Komfortowe pokoje z duszą w zabytkowym dworze." />
+        <meta property="og:image" content="https://phupierrot.pl/img/pokoje.webp" />
       </Helmet>
 
       <Hero title="Nasze pokoje" bgImage="/img/pokoje.webp" nextID="#PokojeIntro" />
