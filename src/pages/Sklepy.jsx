@@ -10,8 +10,11 @@ function Sklepy() {
         <title>Sklepy PHU Pierrot w Chełmie | Świeże Wyroby Garmażeryjne</title>
         <meta name="description" content="Odwiedź nasze sklepy w Chełmie (ul. Wołyńska, ul. Zachodnia). Codziennie świeże pierogi, paszteciki i wyroby garmażeryjne prosto z naszej manufaktury. Zapraszamy!" />
         <link rel="canonical" href="https://phupierrot.pl/sklepy" />
-        <meta property="og:title" content="Sklepy PHU Pierrot w Chełmie" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://phupierrot.pl/sklepy" />
+        <meta property="og:title" content="Sklepy PHU Pierrot w Chełmie | Świeże Wyroby Garmażeryjne" />
         <meta property="og:description" content="Codziennie świeże wyroby garmażeryjne w dwóch lokalizacjach w Chełmie. Sprawdź godziny otwarcia!" />
+        <meta property="og:image" content="https://phupierrot.pl/img/Sklepy/Wolynska1.webp" />
       </Helmet>
       <Hero title="Nasze sklepy" bgImage="/img/pierogi/IMG_2865.jpeg" nextID="#sklepyContent" />
       <Intro title="Nasze sklepy – Świeżość i jakość blisko Ciebie" text="Oferujemy zawsze świeże produkty, lokalne wyroby i codziennie zaopatrzone półki. Sprawdź lokalizacje naszych sklepów i odwiedź nas już dziś!" />
