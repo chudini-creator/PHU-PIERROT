@@ -28,6 +28,10 @@ function DofProj() {
             <Helmet>
                 <title>Dofinansowania i Projekty | PHU Pierrot</title>
                 <meta name="description" content="Informacje o realizowanych projektach i otrzymanych dofinansowaniach w ramach rozwoju PHU Pierrot i Dworu Ujazdowskiego." />
+                <link rel="canonical" href="https://phupierrot.pl/dofinansowania-projekty" />
+                <meta property="og:title" content="Dofinansowania i Projekty | PHU Pierrot" />
+                <meta property="og:description" content="Informacje o realizowanych projektach i otrzymanych dofinansowaniach." />
+                <meta property="og:url" content="https://phupierrot.pl/dofinansowania-projekty" />
             </Helmet>
 
             <Hero title="Dofinansowania i Projekty" bgImage="/img/dwórGóra.webp" nextID="#projects-list" />
