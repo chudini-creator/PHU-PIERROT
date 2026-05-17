@@ -21,7 +21,8 @@ function Wspolpraca() {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://phupierrot.pl/wspolpraca" />
                 <meta property="og:title" content="Współpraca | Dwór Ujazdowski & PHU Pierrot Lubelskie" />
-                <meta property="og:description" content="Zapraszamy do współpracy lokalnych dostawców i partnerów. Twórzmy razem wyjątkowe miejsce na mapie Lubelszczyzny. Skontaktuj się z nami!" />
+                <meta property="og:description" content="Zapraszamy do współpracy lokalnych dostawców i partnerów. Twórzmy razem wyjątkowe miejsce na mapie Lubelszczyzny." />
+                <meta property="og:image" content="https://phupierrot.pl/img/Wspolpraca.webp" />
             </Helmet>
             <Hero title="Współpraca" bgImage="/img/Wspolpraca.webp" nextID="#PartnersIntro" />
             <Intro id="PartnersIntro" title="Nasi zaufani partnerzy i lokalne atrakcje" text="Wiemy jak w dzisiejszej dobie ważna jest współpraca. Właśnie dlatego współpracujemy z lokalnymi przedsiębiorstwami." />
