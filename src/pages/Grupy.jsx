@@ -36,6 +36,7 @@ function Grupy() {
         <meta property="og:url" content="https://phupierrot.pl/grupy-zorganizowane" />
         <meta property="og:title" content="Grupy Zorganizowane | Dwór Ujazdowski Lubelskie" />
         <meta property="og:description" content="Oferta dla grup zorganizowanych w Dworze Ujazdowskim. Imprezy okolicznościowe, szkolenia i integracje w sercu Lubelszczyzny. Zapraszamy!" />
+        <meta property="og:image" content="https://phupierrot.pl/img/GrupyZorganizowane.webp" />
       </Helmet>
       <Hero title="Grupy zorganizowane" bgImage="/img/GrupyZorganizowane.webp" nextID="#IntroGrupy" />
       <Intro id="IntroGrupy" title="Kompleksowa obsługa pobytów dla grup zorganizowanych" text="Zapraszamy grupy zorganizowane do spędzenia niezapomnianego czasu w
