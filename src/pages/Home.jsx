@@ -43,7 +43,7 @@ const offerCards = [
     {
         title: "Apartamenty na wyłączność",
         description: "Trzy apartamenty, strefa wellness i komfort dla maksymalnie 11 osób.",
-        image: "/img/DwórFront.jpg",
+        image: "/img/DwórFront.webp",
         link: "/apartamenty",
         label: "Pobyt premium",
         icon: Sparkles,
