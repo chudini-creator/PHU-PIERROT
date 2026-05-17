@@ -10,8 +10,11 @@ function Pierogarnia() {
                 <title>Manufaktura Pierogów i Wyrobów Garmażeryjnych Chełm | PHU Pierrot</title>
                 <meta name="description" content="Tradycyjne, ręcznie lepione pierogi, paszteciki i domowe obiady. Nasza manufaktura to smak regionu dostępny w sklepach PHU Pierrot w Chełmie. Sprawdź naszą ofertę!" />
                 <link rel="canonical" href="https://phupierrot.pl/pierogarnia" />
-                <meta property="og:title" content="Manufaktura Pierogów i Wyrobów Garmażeryjnych Chełm" />
+                <meta property="og:title" content="Manufaktura Pierogów i Wyrobów Garmażeryjnych Chełm | PHU Pierrot" />
                 <meta property="og:description" content="Ręcznie lepione pierogi i tradycyjne wyroby garmażeryjne prosto z naszej manufaktury do Twojego stołu." />
+                <meta property="og:url" content="https://phupierrot.pl/pierogarnia" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://phupierrot.pl/img/Pierogarnia/Pierogarnia2.webp" />
             </Helmet>
             <Hero title="Pierogarnia" bgImage="/img/Pierogarnia/Pierogarnia.webp" nextID="#pierogarniaContent" />
             <Intro id="pierogarniaContent" title="Tradycyjna Pierogarnia – Smak regionu w każdym kęsie" text="Nasze wyroby powstają z pasją, która bulgocze w garnkach i pachnie w całej manufakturze. Każde ciasto jest ręcznie wałkowane, każdy farsz doprawiany tak, by rozpalał zmysły. To tradycyjna garmażerka, która trafia prosto do naszych sklepów, by cieszyć Państwa podniebienia codziennie świeżymi pierogami i daniami obiadowymi." />
