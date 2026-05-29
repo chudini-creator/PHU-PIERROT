@@ -8,12 +8,26 @@ const projects = [
     {
         id: 1,
         title: "Dywersyfikacja przedsiębiorstwa PHU PIERROT Agnieszka Szabała poprzez wprowadzenie nowych usług",
-        subtitle: "Projekt realizowany w ramach Krajowego Planu Odbudowy i Zwiększania Odporności (KPO)",
-        description: `Celem przedsięwzięcia jest rozszerzenie działalności o nowe usługi turystyczne i rekreacyjne, w tym stworzenie pola namiotowego oraz strefy relaksu. Projekt skierowany jest do turystów indywidualnych i grup zorganizowanych.
-
-        Efektem projektu będzie rozwój oferty turystycznej oraz zwiększenie atrakcyjności obiektu.`,
-        value: "Wartość przedsięwzięcia: 351 315,24 zł",
-        contribution: "Dofinansowanie UE: 263 210,86 zł",
+        subtitle: "Przedsięwzięcie realizowane w ramach Krajowego Planu Odbudowy i Zwiększania Odporności (KPO).",
+        target: "Celem projektu jest dywersyfikacja działalności przedsiębiorstwa poprzez stworzenie nowego produktu turystycznego oraz rozszerzenie oferty usługowej obiektu.",
+        range: [
+            "przygotowanie pola namiotowego dla namiotów i kamperów",
+            "stworzenie strefy relaksu z jacuzzi i sauną",
+            "modernizacja łazienek",
+            "doposażenie kuchni i pokoi",
+            "uruchomienie punktu ładowania pojazdów elektrycznych",
+            "wdrożenie sieci Wi-Fi i strony internetowej",
+            "rozwój oferty pobytów dla grup zorganizowanych, warsztatów i aktywności rekreacyjnych"
+        ],
+        targetGroup: [
+            "turystów indywidualnych",
+            "grup zorganizowanych",
+            "uczestników warsztatów i wydarzeń tematycznych",
+            "osób poszukujących wypoczynku blisko natury",
+        ],
+        effect: "Efektem projektu będzie rozszerzenie działalności firmy o nowe usługi turystyczne i rekreacyjne, zwiększenie atrakcyjności obiektu oraz pozyskanie nowych klientów. Projekt przyczyni się również do rozwoju ekologicznych i nowoczesnych rozwiązań wspierających turystykę.",
+        value: "Całkowita wartość przedsięwzięcia: 351 315,24 zł",
+        contribution: "Dofinansowanie UE (KPO): 263 210,86 zł",
         logos: [
             { src: "/img/Dofinansowania/RP.webp", alt: "Rzeczpospolita Polska" },
             { src: "/img/Dofinansowania/KPO.webp", alt: "Krajowy Plan Odbudowy" },
@@ -66,17 +80,52 @@ function DofProj() {
                             </div>
 
                             <div className="project-item-content">
-                                <div className="project-item-text">
-                                    <p>{project.description}</p>
+                                <div className="project-item-main">
+                                    <div className="content-block target-block">
+                                        <p>{project.target}</p>
+                                    </div>
+
+                                    <div className="content-inner-grid">
+                                        <div className="content-block range-block">
+                                            <h3>Zakres działań</h3>
+                                            <p className="block-intro">W ramach przedsięwzięcia realizowane są m.in.:</p>
+                                            <ul>
+                                                {project.range.map((item, index) => (
+                                                    <li key={index}>
+                                                        <CheckCircle2 size={16} className="list-icon" />
+                                                        <span>{item}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+
+                                        <div className="content-block groups-block">
+                                            <h3>Grupy docelowe</h3>
+                                            <p className="block-intro">Oferta skierowana jest do:</p>
+                                            <ul>
+                                                {project.targetGroup.map((group, index) => (
+                                                    <li key={index}>
+                                                        <CheckCircle2 size={16} className="list-icon" />
+                                                        <span>{group}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div className="content-block effect-block">
+                                        <h3>Efekty przedsięwzięcia</h3>
+                                        <p>{project.effect}</p>
+                                    </div>
                                 </div>
-                                
+
                                 <div className="project-item-details">
                                     <div className="detail-box">
-                                        <CheckCircle2 size={18} />
+                                        <Award size={20} />
                                         <span>{project.value}</span>
                                     </div>
-                                    <div className="detail-box">
-                                        <CheckCircle2 size={18} />
+                                    <div className="detail-box highlight">
+                                        <FileText size={20} />
                                         <span>{project.contribution}</span>
                                     </div>
                                 </div>
